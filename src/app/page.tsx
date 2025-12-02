@@ -1,8 +1,11 @@
+import Hero from "./components/hero";
+import { ServicesSection } from "./components/services";
 
 export default function Home() {
   return (
     <div className="">
-      <h1>Hello</h1>
+      <Hero />
+      <ServicesSection/>
     </div>
   );
 }

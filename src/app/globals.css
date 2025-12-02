@@ -1,8 +1,103 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #000;
   --foreground: #171717;
+}
+
+
+@font-face {
+  font-family: "Futuru";
+  src: url("/fonts/Futura/WOFF2/Futuru-Medium.woff2") format("woff2"),
+    url("/fonts/Futura/WOFF/Futuru-Medium.woff") format("woff"),
+    url("/fonts/Futura/OTF/Futuru-Medium.otf") format("opentype"),
+    url("/fonts/Futura/TTF/Futuru-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Futuru";
+  src: url("/fonts/Futura/WOFF2/Futuru-Bold.woff2") format("woff2"),
+    url("/fonts/Futura/WOFF/Futuru-Bold.woff") format("woff"),
+    url("/fonts/Futura/OTF/Futuru-Bold.otf") format("opentype"),
+    url("/fonts/Futura/TTF/Futuru-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Futuru";
+  src: url("/fonts/Futura/WOFF2/Futuru-Regular.woff2") format("woff2"),
+    url("/fonts/Futura/WOFF/Futuru-Regular.woff") format("woff"),
+    url("/fonts/Futura/OTF/Futuru-Regular.otf") format("opentype"),
+    url("/fonts/Futura/TTF/Futuru-Regular.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Futuru";
+  src: url("/fonts/Futura/WOFF2/Futuru-Semibold.woff2") format("woff2"),
+    url("/fonts/Futura/WOFF/Futuru-Semibold.woff") format("woff"),
+    url("/fonts/Futura/OTF/Futuru-Semibold.otf") format("opentype"),
+    url("/fonts/Futura/TTF/Futuru-Semibold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Futuru";
+  src: url("/fonts/Futura/WOFF2/Futuru-Extrabold.woff2") format("woff2"),
+    url("/fonts/Futura/WOFF/Futuru-Extrabold.woff") format("woff"),
+    url("/fonts/Futura/OTF/Futuru-Extrabold.otf") format("opentype"),
+    url("/fonts/Futura/TTF/Futuru-Extrabold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Futuru";
+  src: url("/fonts/Futura/WOFF2/Futuru-Extralight.woff2") format("woff2"),
+    url("/fonts/Futura/WOFF/Futuru-Extralight.woff") format("woff"),
+    url("/fonts/Futura/OTF/Futuru-Extralight.otf") format("opentype"),
+    url("/fonts/Futura/TTF/Futuru-Extralight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Futuru";
+  src: url("/fonts/Futura/WOFF2/Futuru-Light.woff2") format("woff2"),
+    url("/fonts/Futura/WOFF/Futuru-Light.woff") format("woff"),
+    url("/fonts/Futura/OTF/Futuru-Light.otf") format("opentype"),
+    url("/fonts/Futura/TTF/Futuru-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Futuru";
+  src: url("/fonts/Futura/WOFF2/Futuru-Thin.woff2") format("woff2"),
+    url("/fonts/Futura/WOFF/Futuru-Thin.woff") format("woff"),
+    url("/fonts/Futura/OTF/Futuru-Thin.otf") format("opentype"),
+    url("/fonts/Futura/TTF/Futuru-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BlauerNeue";
+  src: url("/fonts/BlauerNeue/blauer-medium.otf") format("opentype");
+  font-weight: 500; /* Medium */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BlauerNeue";
+  src: url("/fonts/BlauerNeue/blauer-semibold.otf") format("opentype");
+  font-weight: 600; /* Semibold */
+  font-style: normal;
 }
 
 @theme inline {
@@ -14,13 +109,52 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #000;
+    --foreground: #000000;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+ font-family: "Futuru", "Space ";
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Futuru", sans-serif;
+}
+
+
+p {
+  font-family: "Futuru", sans-serif; 
+}
+
+
+
+/* <CHANGE>  custom animations for scrolling lines left to right */
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-scroll-left {
+  animation: scroll-left 30s linear infinite;
+}
+
+.animate-scroll-right {
+  animation: scroll-right 30s linear infinite;
 }
