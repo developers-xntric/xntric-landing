@@ -1,3 +1,5 @@
+import { CTASection } from "./components/CTASection";
+import { FAQSection } from "./components/faq-section";
 import Hero from "./components/hero";
 import OurProcess from "./components/our-process";
 import { ServicesSection } from "./components/services";
@@ -57,6 +59,8 @@ export default function Home() {
       <ServicesSection/>
       <OurProcess   steps={steps4}/>
       <TechStack/>
+      <CTASection/>
+      <FAQSection/>
     </div>
   );
 }
