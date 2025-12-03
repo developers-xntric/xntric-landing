@@ -36,15 +36,15 @@ export function Testimonials() {
                     What Our Clients Say
                 </h2>
 
-                <div className="flex gap-4">
+                <div className="flex gap-2">
                     <button
-                        className="border-l border-t border-b border-[#FFFFFF33] bg-white/5 backdrop-blur-xl text-white p-3 rounded-[10px] hover:bg-white/40 transition"
+                        className="border-l border-t border-b border-[#FFFFFF33] hover:bg-[#00AA71] backdrop-blur-xl text-white p-3 rounded-[10px] bg-white/5 transition cursor-pointer"
                         onClick={() => carouselApi?.scrollPrev()}
                     >
                         <ArrowLeftIcon className="2xl:w-6 2xl:h-6 w-5 h-5" />
                     </button>
                     <button
-                        className="border-l border-t border-b border-[#FFFFFF33] bg-[#00AA71] backdrop-blur-xl text-white p-3 rounded-[10px] hover:bg-white/40 transition"
+                        className="border-r border-t border-b border-[#FFFFFF33] hover:bg-[#00AA71] backdrop-blur-xl text-white p-3 rounded-[10px] bg-white/5 transition cursor-pointer"
                         onClick={() => carouselApi?.scrollNext()}
                     >
                         <ArrowRightIcon className="2xl:w-6 2xl:h-6 w-5 h-5" />
@@ -78,9 +78,9 @@ export function Testimonials() {
 
                                         {/* Client Name */}
                                         <CardTitle className="text-[30px] text-white tracking-[2px] text-left">
-                                            <h3>
+                                            <p>
                                                 {client.name}
-                                            </h3>
+                                            </p>
                                         </CardTitle>
 
                                         {/* Client Designation */}

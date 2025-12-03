@@ -1,4 +1,5 @@
 import AboutSection from "./components/about-section";
+import CaseStudies from "./components/case-studies";
 import Hero from "./components/hero";
 import OurProcess from "./components/our-process";
 import { PainPoints } from "./components/pain-points";
@@ -63,6 +64,7 @@ export default function Home() {
       <OurProcess   steps={steps4}/>
       <TechStack/>
       <Testimonials/>
+      <CaseStudies/>
     </div>
   );
 }
