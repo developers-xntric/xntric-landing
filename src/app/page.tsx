@@ -65,8 +65,8 @@ export default function Home() {
       <ServicesSection/>
       <OurProcess   steps={steps4}/>
       <TechStack/>
-      <Testimonials/>
       <CaseStudies/>
+      <Testimonials/>
       <CTASection/>
       <FAQSection/>
     </div>
