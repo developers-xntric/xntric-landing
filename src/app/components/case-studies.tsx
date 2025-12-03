@@ -93,7 +93,7 @@ export default function CaseStudies({ isPadding = false }) {
     );
 
     return (
-        <section className={`${isPadding ? "py-16" : ""} max-w-[90%] mx-auto font-futuru`}>
+        <section className={`${isPadding ? "py-16" : ""} 2xl:max-w-[1620px] mx-auto md:w-[89.5%] 2xl:w-[84.5%] font-futuru`}>
             <div className="flex flex-col gap-12">
                 {currentCardSets.map((set) => (
                     <div
