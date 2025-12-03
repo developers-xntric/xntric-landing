@@ -1,5 +1,7 @@
 import AboutSection from "./components/about-section";
 import CaseStudies from "./components/case-studies";
+import { CTASection } from "./components/CTASection";
+import { FAQSection } from "./components/faq-section";
 import Hero from "./components/hero";
 import OurProcess from "./components/our-process";
 import { PainPoints } from "./components/pain-points";
@@ -65,6 +67,8 @@ export default function Home() {
       <TechStack/>
       <Testimonials/>
       <CaseStudies/>
+      <CTASection/>
+      <FAQSection/>
     </div>
   );
 }
