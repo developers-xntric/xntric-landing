@@ -93,20 +93,37 @@ export default function CaseStudies({ isPadding = false }) {
     );
 
     return (
-        <section
-            className={`${isPadding ? "py-16" : ""} max-w-[90%] mx-auto font-futuru`}
-        >
+        <section className={`${isPadding ? "py-16" : ""} max-w-[90%] mx-auto font-futuru`}>
             <div className="flex flex-col gap-12">
                 {currentCardSets.map((set) => (
                     <div
                         key={set.id}
-                        className="grid md:grid-cols-2 gap-8 border-t border-b border-[#454545] bg-white/10 backdrop-blur-xl rounded-[8px] p-6"
+                        className="grid md:grid-cols-2  gap-8 border-t border-b border-[#454545] bg-white/10 backdrop-blur-xl rounded-[8px] p-6"
                     >
                         {/* Left Column: Content + Video */}
-                        <div className="flex  gap-4">
 
-                            <div className="flex flex-col justify-between">
+                        <div className="flex gap-4 h-[500px]">
+                            <div className="flex flex-col justify-between w-1/2">
+                                <h3 className="text-white font-semibold text-[1.125rem] md:text-[1.25rem] leading-[1.4]">
+                                    {set.cards.results.title}
+                                </h3>
+                                <p className="text-white/70 text-[0.9375rem] md:text-[1rem] leading-[1.6]">
+                                    {set.cards.results.description}
+                                </p>
+                            </div>
+                            <Image
+                                src={set.cards.results.imageSrc}
+                                alt="Case Study Image"
+                                width={400}
+                                height={240}
+                                className="w-1/2 h-full rounded-[8px] object-cover"
+                            />
+                        </div>
 
+
+
+                        <div className="flex gap-4 h-[500px]">
+                            <div className="flex flex-col justify-between w-1/2">
                                 <h2 className="text-[1.375rem] md:text-[1.5rem] font-semibold text-white leading-[1.4]">
                                     {set.cards.strategy.title}
                                 </h2>
@@ -120,29 +137,13 @@ export default function CaseStudies({ isPadding = false }) {
                                     autoPlay
                                     loop
                                     muted
-                                    className="w-full h-full rounded-[8px] object-cover"
+                                    className="w-1/2 h-full rounded-[8px] object-cover"
                                 />
                             )}
                         </div>
 
                         {/* Right Column: Content + Image */}
-                        <div className="flex  gap-4">
-                            <div className="flex flex-col justify-between">
-                                <h3 className="text-white font-semibold text-[1.125rem] md:text-[1.25rem] leading-[1.4]">
-                                    {set.cards.results.title}
-                                </h3>
-                                <p className="text-white/70 text-[0.9375rem] md:text-[1rem] leading-[1.6]">
-                                    {set.cards.results.description}
-                                </p>
-                            </div>
-                            <Image
-                                src={set.cards.results.imageSrc}
-                                alt="Case Study Image"
-                                width={400}
-                                height={240}
-                                className="w-full h-full rounded-[8px] object-cover"
-                            />
-                        </div>
+
                     </div>
                 ))}
             </div>
@@ -154,8 +155,8 @@ export default function CaseStudies({ isPadding = false }) {
                         key={idx}
                         onClick={() => setCurrentPage(idx)}
                         className={`w-10 h-10 rounded-[8px] border border-white/20 backdrop-blur-md flex items-center justify-center text-white font-semibold transition-all ${currentPage === idx
-                            ? "bg-[#00AA71]/20 border-[#00AA71]"
-                            : "bg-white/5 hover:bg-white/10"
+                                ? "bg-[#00AA71]/20 border-[#00AA71]"
+                                : "bg-white/5 hover:bg-white/10"
                             }`}
                     >
                         {idx + 1}
