@@ -9,6 +9,7 @@ import { PainPoints } from "./components/pain-points";
 import { ServicesSection } from "./components/services";
 import TechStack from "./components/tech-stacks";
 import { Testimonials } from "./components/testimonials";
+import WhyChooseUs from "./components/why-choose-us";
 
 
 
@@ -67,11 +68,7 @@ export default function Home() {
       <OurProcess steps={steps4} />
       <TechStack />
       <CaseStudies />
-
-
-      {/* NEW SECTION */}
-
-
+      <WhyChooseUs />
       <Testimonials />
       <div className="relative overflow-hidden">
         <div className="absolute bottom-[-80px] right-[-550px] -z-10">
