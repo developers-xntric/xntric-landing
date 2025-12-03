@@ -127,10 +127,12 @@ function StepCard({ step, index }: { step: Step; index: number }) {
     );
 }
 
-export default function OurProcess({ steps }: { steps: any }) {
+export default function OurProcess({ steps }: { steps?: Step[] }) {
     const pinSectionRef = useRef(null);
     const [isDesktop, setIsDesktop] = useState<boolean | null>(null);
     const [isMounted, setIsMounted] = useState(false);
+
+    const stepsToDisplay = steps || [];
 
     useEffect(() => {
         setIsMounted(true);
@@ -187,9 +189,9 @@ export default function OurProcess({ steps }: { steps: any }) {
                 </div>
 
                 {/* Cards */}
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 overflow-hidden">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 overflow-hidden">
 
-                    {steps.map((step: Step, index: number) => (
+                    {stepsToDisplay.map((step: Step, index: number) => (
                         <StepCard key={index} step={step} index={index} />
                     ))}
                 </div>

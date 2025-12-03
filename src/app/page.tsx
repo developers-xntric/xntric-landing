@@ -4,6 +4,7 @@ import OurProcess from "./components/our-process";
 import { PainPoints } from "./components/pain-points";
 import { ServicesSection } from "./components/services";
 import TechStack from "./components/tech-stacks";
+import { Testimonials } from "./components/testimonials";
 
 
 
@@ -61,6 +62,7 @@ export default function Home() {
       <ServicesSection/>
       <OurProcess   steps={steps4}/>
       <TechStack/>
+      <Testimonials/>
     </div>
   );
 }
