@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { Plus, Minus } from "lucide-react"
+import Image from "next/image"
 
 interface FAQItem {
   id: string
@@ -60,7 +61,7 @@ const faqItems: FAQItem[] = [
 ]
 
 export function FAQSection() {
-  const [expandedId, setExpandedId] = useState<string | null>("1")
+  const [expandedId, setExpandedId] = useState<string | null>("0")
 
   const toggleExpand = (id: string) => {
     setExpandedId(expandedId === id ? null : id)
@@ -73,24 +74,23 @@ export function FAQSection() {
   const renderItem = (item: FAQItem) => (
     <div
       key={item.id}
-      className={`border rounded-md p-6 cursor-pointer backdrop-blur-lg bg-white/10 transition-colors flex flex-col
-        ${expandedId === item.id ? "border-green-500" : "border-border hover:border-green-500"}
+      className={` rounded-md p-6 2xl:p-8 cursor-pointer backdrop-blur-lg bg-white/10 transition-colors flex flex-col
+        ${expandedId === item.id ? "border border-[#00AA71]" : ""}
       `}
       onClick={() => toggleExpand(item.id)}
     >
       <div className="flex items-start justify-between gap-4">
-        <h3 className="text-[20px] text-white tracking-[1.5px] flex-1">
+        <h3 className="text-[20px] 2xl:text-[25px] text-white tracking-[1.5px] flex-1">
           {item.question}
         </h3>
 
-        <div className="flex-shrink-0 mt-1">
+        <div className="shrink-0 ">
           <div
-            className={`w-6 h-6 rounded flex items-center justify-center transition-colors ${
-              expandedId === item.id ? "bg-green-500" : "bg-white border border-gray-300"
-            }`}
+            className={`w-10 h-10 rounded-[10px] flex items-center justify-center transition-colors ${expandedId === item.id ? "bg-[#00AA71]" : "bg-white border border-gray-300"
+              }`}
           >
             {expandedId === item.id ? (
-              <Minus size={18} className="text-white" />
+              <Minus size={18} className="text-black" />
             ) : (
               <Plus size={18} className="text-black" />
             )}
@@ -99,14 +99,13 @@ export function FAQSection() {
       </div>
 
       <div
-        className={`overflow-hidden transition-all duration-300 ease-in-out ${
-          expandedId === item.id ? "mt-4" : "mt-0"
-        }`}
+        className={`overflow-hidden transition-all duration-300 ease-in-out ${expandedId === item.id ? "mt-4" : "mt-0"
+          }`}
         style={{
           maxHeight: expandedId === item.id ? "200px" : "0px",
         }}
       >
-        <div className="text-[15px] text-white font-light tracking-[1.5px]">
+        <div className="text-[16px] 2xl:text-[22px] text-white font-light tracking-[2px] max-w-[85%]">
           {item.answer}
         </div>
       </div>
@@ -114,8 +113,18 @@ export function FAQSection() {
   )
 
   return (
-    <div className="w-full py-16">
-      <h2 className="text-[50px] leading-[50px] font-bold tracking-[2px] text-white text-center max-w-[800px] mx-auto uppercase pb-8">
+    <div className="w-full py-16 relative">
+      {/* Background SVGs */}
+      <div className="absolute top-[-50px] left-[-450px] -z-10">
+        <Image
+          src="/left-hero-bg.svg"
+          alt="Hero Background"
+          width={400}
+          height={400}
+          className="w-[90%] h-full object-cover"
+        />
+      </div>
+      <h2 className="text-[50px] leading-[50px] font-bold tracking-[2px] text-white text-center max-w-[800px] mx-auto uppercase mb-14">
         FREQUENTLY ASKED QUESTIONS
       </h2>
 

@@ -1,7 +1,7 @@
 export default function AboutSection() {
     return (
         <section className="w-full py-20">
-            <div className="2xl:max-w-[1740px] mx-auto md:w-[89%] 2xl:w-[85%] grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div className="2xl:max-w-[1740px] mx-auto md:w-[89%] 2xl:w-[85%] grid grid-cols-1 lg:grid-cols-2 gap-12 h-[600px]">
 
                 {/* LEFT SIDE */}
                 <div className="space-y-6">

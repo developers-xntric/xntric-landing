@@ -52,7 +52,7 @@ export function PainPoints({ issues }: IssuesListProps) {
           <div
             key={issue.id}
             className="
-              px-5 py-4
+              px-5 pb-5 pt-4
               rounded-xl
               text-white
               text-[20px] 2xl:text-[25px]

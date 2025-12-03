@@ -765,7 +765,7 @@ export default function TechStack({ para }: { para?: string }) {
                                             )
                                             .map((tech, index) => (
                                                 <div key={`${slideIndex}-${index}`} className="">
-                                                    <div className="flex items-center gap-4 justify-center 2xl:w-[99%] min-h-[110px] 2xl:min-h-[130px] rounded-[8px] border-t border-b border-e border-[#454545] bg-white/10 backdrop-blur-xl transition-all duration-300 transform">
+                                                    <div className="flex items-center gap-4 justify-center 2xl:w-[99%] min-h-[110px] 2xl:min-h-[130px] rounded-[8px] border-t border-b border-e border-[#FFFDFD42] bg-white/10 backdrop-blur-xl transition-all duration-300 transform">
                                                         <div className=" transition-transform duration-300 ">
                                                             {tech.icon}
                                                         </div>

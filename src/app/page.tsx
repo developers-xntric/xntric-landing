@@ -1,3 +1,4 @@
+import Image from "next/image";
 import AboutSection from "./components/about-section";
 import CaseStudies from "./components/case-studies";
 import { CTASection } from "./components/CTASection";
@@ -43,7 +44,7 @@ export const steps4 = [
     description: "Performance, SEO, CRO, QA testing",
     icon: "/optimize-icon.svg",
     bgImage: "/optimize-bg.png",
-     bgColor: "bg-gray-900",
+    bgColor: "bg-gray-900",
   },
   {
     number: "04",
@@ -60,16 +61,26 @@ export default function Home() {
   return (
     <div className="">
       <Hero />
-      <AboutSection/>
-      <PainPoints/>
-      <ServicesSection/>
-      <OurProcess   steps={steps4}/>
-      <TechStack/>
-      <CaseStudies/>
-      <Testimonials/>
-      <CTASection/>
-      <FAQSection/>
-      <CTASection/>
+      <AboutSection />
+      <PainPoints />
+      <ServicesSection />
+      <OurProcess steps={steps4} />
+      <TechStack />
+      <CaseStudies />
+      <Testimonials />
+      <div className="relative overflow-hidden">
+        <div className="absolute bottom-[-80px] right-[-550px] -z-10">
+          <Image  
+            src="/right-hero-bg.svg"
+            alt="Hero Background"
+            width={400}
+            height={400}
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <FAQSection />
+        <CTASection />
+      </div>
     </div>
   );
 }
