@@ -1,5 +1,7 @@
+import AboutSection from "./components/about-section";
 import Hero from "./components/hero";
 import OurProcess from "./components/our-process";
+import { PainPoints } from "./components/pain-points";
 import { ServicesSection } from "./components/services";
 import TechStack from "./components/tech-stacks";
 
@@ -54,6 +56,8 @@ export default function Home() {
   return (
     <div className="">
       <Hero />
+      <AboutSection/>
+      <PainPoints/>
       <ServicesSection/>
       <OurProcess   steps={steps4}/>
       <TechStack/>

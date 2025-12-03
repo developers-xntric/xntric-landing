@@ -97,7 +97,7 @@ export function ServicesSection() {
                     <div className="group relative rounded-[8px] border-r border-t border-b border-[#FFFFFF33] bg-white/5 backdrop-blur-xl overflow-hidden grid grid-cols-1 lg:grid-cols-2">
 
                         {/* Left Image */}
-                        <div className="relative h-64 2xl:h-80 w-full overflow-hidden m-3">
+                        <div className="relative h-64 2xl:h-80 w-full overflow-hidden mt-4 ml-4  2xl:mb-4 2xl:ml-4">
                             <Image
                                 src="/web-service.svg"
                                 alt="Website Redesign"

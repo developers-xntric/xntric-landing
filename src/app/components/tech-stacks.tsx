@@ -742,7 +742,7 @@ export default function TechStack({ para }: { para?: string }) {
                     <h2 className="text-[50px] leading-[50px] font-bold tracking-[2px] text-white text-center max-w-[800px] mx-auto uppercase">
                         Technology STACK
                     </h2>
-                    <p className="self-stretch text-center justify-start text-white/80 text-[14px] lg:text-xl font-light tracking-wide font-futuru leading-[27px]">
+                    <p className="self-stretch text-center justify-start text-white/80 text-[14px] lg:text-xl font-light tracking-[2px] font-futuru leading-[27px]">
                         {para || "Tech That Powers Performance"}
                     </p>
                 </div>
@@ -765,11 +765,11 @@ export default function TechStack({ para }: { para?: string }) {
                                             )
                                             .map((tech, index) => (
                                                 <div key={`${slideIndex}-${index}`} className="">
-                                                    <div className="flex items-center gap-4 justify-center 2xl:w-[99%] min-h-[110px] 2xl:min-h-[130px] rounded-[8px] border-t border-b border-e-1 border-[#454545] bg-white/10 backdrop-blur-xl transition-all duration-300 transform">
+                                                    <div className="flex items-center gap-4 justify-center 2xl:w-[99%] min-h-[110px] 2xl:min-h-[130px] rounded-[8px] border-t border-b border-e border-[#454545] bg-white/10 backdrop-blur-xl transition-all duration-300 transform">
                                                         <div className=" transition-transform duration-300 ">
                                                             {tech.icon}
                                                         </div>
-                                                        <span className="text-white tracking-wide font-light font-futuru text-[30px] 2xl:text-[34px] text-center transition-colors duration-300">
+                                                        <span className="text-white tracking-wide font-light font-futuru text-[25px] 2xl:text-[30px] text-center transition-colors duration-300">
                                                             {tech.name}
                                                         </span>
                                                     </div>

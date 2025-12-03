@@ -88,7 +88,8 @@ function StepCard({ step, index }: { step: Step; index: number }) {
     return (
         <section
             ref={cardRef}
-            className={`relative min-h-[25vh] lg:min-h-[45vh] lg:w-[40%] flex flex-col justify-start ${step.bgColor}`}
+            className={`relative min-h-[55vh] 2xl:min-h-[52vh] w-full flex flex-col justify-start ${step.bgColor}`}
+
         >
             {step.bgImage && (
                 <div
@@ -111,16 +112,15 @@ function StepCard({ step, index }: { step: Step; index: number }) {
                     </div>
 
                     <h3
-                        className={`xl:w-[233px] mx-auto text-center text-[28px] xl:text-[34px] font-semibold tracking-wide font-futuru uppercase leading-[35px] ${
-                            step.number === "05" ? "text-black" : "text-white"
-                        }`}
+                        className={`xl:w-[233px] mx-auto text-center text-[28px] 2xl:text-[34px] font-semibold tracking-wide font-futuru uppercase leading-[35px] ${step.number === "05" ? "text-black" : "text-white"
+                            }`}
                     >
                         {step.title}
                     </h3>
 
-                    <div className="xl:w-[280px] min-h-20 mx-auto opacity-70 text-center text-base font-futuru leading-[21px] text-white font-light tracking-wider 2xl:text-[18px]">
+                    <h3 className="lg:w-[90%] 2xl:w-[280px] font-futuru min-h-20 mx-auto opacity-80 text-center text-base font-futuru leading-[21px] text-white font-light tracking-[2px] 2xl:text-[18px] xl:text-[15px]">
                         {step.description}
-                    </div>
+                    </h3>
                 </div>
             </div>
         </section>
@@ -128,8 +128,7 @@ function StepCard({ step, index }: { step: Step; index: number }) {
 }
 
 export default function OurProcess({ steps }: { steps: any }) {
-    // const sectionRef = useRef(null);
-    const pinSectionRef = useRef(null); 
+    const pinSectionRef = useRef(null);
     const [isDesktop, setIsDesktop] = useState<boolean | null>(null);
     const [isMounted, setIsMounted] = useState(false);
 
@@ -150,7 +149,7 @@ export default function OurProcess({ steps }: { steps: any }) {
             const timer = setTimeout(() => {
                 const pinTrigger = ScrollTrigger.create({
                     trigger: pinSectionRef.current,
-                    start: "top 15%",
+                    start: "top 12%",
                     end: "+=200%",
                     pin: true,
                     pinSpacing: true,
@@ -177,7 +176,7 @@ export default function OurProcess({ steps }: { steps: any }) {
     return (
         <div className="md:py-16 font-futuru space-y-6 md:space-y-20">
 
-             {/* 🔥 WRAP TITLE + CARDS TO PIN ONLY THIS BLOCK */}
+            {/* 🔥 WRAP TITLE + CARDS TO PIN ONLY THIS BLOCK */}
             <div ref={pinSectionRef} className="space-y-20">
 
                 {/* Title */}
@@ -188,7 +187,8 @@ export default function OurProcess({ steps }: { steps: any }) {
                 </div>
 
                 {/* Cards */}
-                <div className="grid lg:flex">
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 overflow-hidden">
+
                     {steps.map((step: Step, index: number) => (
                         <StepCard key={index} step={step} index={index} />
                     ))}
