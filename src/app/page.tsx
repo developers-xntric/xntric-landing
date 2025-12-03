@@ -64,9 +64,14 @@ export default function Home() {
       <AboutSection />
       <PainPoints />
       <ServicesSection />
-      <OurProcess steps={steps4} />
+      <OurProcess steps={steps4} />]
       <TechStack />
       <CaseStudies />
+
+
+      {/* NEW SECTION */}
+
+
       <Testimonials />
       <div className="relative overflow-hidden">
         <div className="absolute bottom-[-80px] right-[-550px] -z-10">
