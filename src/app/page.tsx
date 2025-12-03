@@ -64,7 +64,7 @@ export default function Home() {
       <AboutSection />
       <PainPoints />
       <ServicesSection />
-      <OurProcess steps={steps4} />]
+      <OurProcess steps={steps4} />
       <TechStack />
       <CaseStudies />
 
