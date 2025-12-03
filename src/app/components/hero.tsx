@@ -54,7 +54,19 @@ const Hero = () => {
                 </div>
 
                 {/* Right Form with Glass Effect */}
-                <div className="lg:w-1/2 bg-white/5 backdrop-blur-xl rounded-[20px] py-12 px-6 shadow-lg w-full max-w-md border border-[#FFFFFF33] flex flex-col items-center space-y-8">
+             <div className="
+    relative lg:w-1/2 
+    bg-linear-to-r from-white/10 to-transparent 
+    backdrop-blur-xl rounded-[20px] 
+    py-12 px-6 w-full max-w-md 
+    shadow-xl
+    flex flex-col items-center space-y-8
+    before:content-[''] before:absolute before:top-0 before:left-0 
+    before:w-[50px] before:h-[50px]
+    before:bg-white/20 before:blur-[90px] before:rounded-full
+    before:-translate-x-1/2 before:-translate-y-1/2
+">
+
                     <h2 className="text-4xl md:text-[40px] font-bold uppercase text-center">LET'S GET STARTED</h2>
                     <form className="space-y-4 w-full">
                         <div className="flex gap-4">
@@ -62,12 +74,12 @@ const Hero = () => {
                             <input
                                 type="text"
                                 placeholder="Full Name"
-                                className="w-full px-4 py-3 rounded-[8px] bg-transparent placeholder-white text-white border border-white/30 focus:outline-none focus:border-[#00AA71] font-light tracking-[1.5px]"
+                                className="w-full px-4 py-3 rounded-lg bg-transparent placeholder-white text-white border border-white/30 focus:outline-none focus:border-[#00AA71] font-light tracking-[1.5px]"
                             />
                             <input
                                 type="email"
                                 placeholder="Email Address"
-                                className="w-full px-4 py-3 rounded-[8px] bg-transparent placeholder-white text-white border border-white/30 focus:outline-none focus:border-[#00AA71] font-light tracking-[1.5px]"
+                                className="w-full px-4 py-3 rounded-lg bg-transparent placeholder-white text-white border border-white/30 focus:outline-none focus:border-[#00AA71] font-light tracking-[1.5px]"
                             />
                         </div>
                         <div className="flex gap-4">
@@ -75,12 +87,12 @@ const Hero = () => {
                             <input
                                 type="text"
                                 placeholder="Company Name"
-                                className="w-full px-4 py-3 rounded-[8px] bg-transparent placeholder-white text-white border border-white/30 focus:outline-none focus:border-[#00AA71] font-light tracking-[1.5px]"
+                                className="w-full px-4 py-3 rounded-lg bg-transparent placeholder-white text-white border border-white/30 focus:outline-none focus:border-[#00AA71] font-light tracking-[1.5px]"
                             />
                             <input
                                 type="text"
                                 placeholder="Phone Number"
-                                className="w-full px-4 py-3 rounded-[8px] bg-transparent placeholder-white text-white border border-white/30 focus:outline-none focus:border-[#00AA71] font-light tracking-[1.5px]"
+                                className="w-full px-4 py-3 rounded-lg bg-transparent placeholder-white text-white border border-white/30 focus:outline-none focus:border-[#00AA71] font-light tracking-[1.5px]"
                             />
                         </div>
                         <div className="flex items-center justify-center gap-4 mt-10">

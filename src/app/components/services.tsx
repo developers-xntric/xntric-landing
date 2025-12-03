@@ -72,22 +72,22 @@ export function ServicesSection() {
     return (
         <section className="relative w-full overflow-hidden py-16">
             {/* LEFT BG SVG */}
-            <div className="absolute bottom-[-80px] left-[-400px] -z-10">
+            <div className="absolute bottom-[-10px] left-[-300px] -z-10">
                 <Image
                     src="/left-hero-bg.svg"
                     alt="Hero Background"
                     width={400}
                     height={400}
-                    className="w-[85%] h-full object-cover"
+                    className="w-[65%] h-full object-cover"
                 />
             </div>
 
-            <div className="relative z-10 2xl:max-w-[1480px] mx-auto md:w-[88%]">
+            <div className="relative z-10 2xl:max-w-[1740px] mx-auto md:w-[89%] 2xl:w-[85%]">
                 {/* Heading */}
                 <div className="mb-16 text-center">
-                    <h1 className="text-[50px] leading-[50px] font-bold tracking-[2px] text-white text-center max-w-[800px] mx-auto">
+                    <h2 className="text-[50px] leading-[50px] font-bold tracking-[2px] text-white text-center max-w-[800px] mx-auto">
                         COMPLETE WEBSITE SOLUTIONS <br /> FOR EVERY BUSINESS SIZE
-                    </h1>
+                    </h2>
                 </div>
 
                 {/* --------------------------------------------------- */}
@@ -122,7 +122,7 @@ export function ServicesSection() {
                                 className="inline-block w-fit px-6 pb-2 pt-1 tracking-[1.5px] rounded-md text-white uppercase bg-[#00AA71] hover:bg-transparent hover:text-[#00AA71] hover:border-[#00AA71] hover:border transition text-[14px]"
                             >
                                 Learn More
-                            </Link>
+                            </Link> 
                         </div>
                     </div>
                 </div>
