@@ -55,10 +55,10 @@ export function FAQSection() {
   }
 
   return (
-    <div className="w-full py-16">
+    <div className="w-full py-16 ">
       <h2 className="text-[50px] leading-[50px] font-bold tracking-[2px] text-white text-center max-w-[800px] mx-auto uppercase pb-8">FREQUENTLY ASKED QUESTIONS</h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 2xl:max-w-[1620px] mx-auto md:w-[89.5%] 2xl:w-[84.5%]">
         {faqItems.map((item) => (
           <div
             key={item.id}

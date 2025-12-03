@@ -21,7 +21,7 @@ export function CTASection() {
   }
   return (
     <section className="py-16">
-      <div className="max-w-4xl mx-auto text-center">
+      <div className="max-w-4xl mx-auto text-center ">
         {/* Heading */}
         <h2 className="text-[50px] leading-[50px] font-bold tracking-[2px] text-white text-center max-w-[800px] mx-auto uppercase pb-4" style={{color:"white"}}>
           READY TO BUILD A WEBSITE THAT DRIVES GROWTH?
