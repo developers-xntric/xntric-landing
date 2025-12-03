@@ -67,8 +67,8 @@ export default function Home() {
       <TechStack/>
       <Testimonials/>
       <CaseStudies/>
-      <CTASection/>
       <FAQSection/>
+      <CTASection/>
     </div>
   );
 }

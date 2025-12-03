@@ -20,7 +20,7 @@ export function CTASection() {
     // Handle form submission here
   }
   return (
-    <section className="py-16">
+    <section className="pt-2 pb-20">
       <div className="max-w-4xl mx-auto text-center ">
         {/* Heading */}
         <h2 className="text-[50px] leading-[50px] font-bold tracking-[2px] text-white text-center max-w-[800px] mx-auto uppercase pb-4" style={{color:"white"}}>
@@ -34,10 +34,11 @@ export function CTASection() {
         {/* Form */}
         <form 
           onSubmit={handleSubmit}
-          className="w-full flex flex-row gap-4 backdrop-blur-lg bg-white/10 border border-white/20 rounded-xl p-6 shadow-lg"
+          className="w-full flex flex-row gap-4 backdrop-blur-lg bg-white/10 border border-white/20 rounded-xl pt-9 pb-9 px-10 shadow-lg"
           style={{
-            boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.37)",
+            // boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.37)",
             border: "1px solid rgba(255, 255, 255, 0.18)",
+            borderRadius: "10px",
           }}
         >
           <input
@@ -46,7 +47,10 @@ export function CTASection() {
             placeholder="Full Name"
             value={formData.fullName}
             onChange={handleChange}
-            className="w-full px-4 py-3 border border-white/30 rounded-xl bg-transparent text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-green-500"
+            className="w-full px-4 py-3 rounded-lg bg-transparent placeholder-white text-white border border-white/30 focus:outline-none focus:border-[#00AA71] font-light tracking-[1.5px]"
+            style={{
+            borderRadius: "8px",
+          }}
             required
           />
           <input
@@ -55,7 +59,10 @@ export function CTASection() {
             placeholder="Email Address"
             value={formData.email}
             onChange={handleChange}
-            className="w-full px-4 py-3 border border-white/30 rounded-xl bg-transparent text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-green-500"
+            className="w-full px-4 py-3 rounded-lg bg-transparent placeholder-white text-white border border-white/30 focus:outline-none focus:border-[#00AA71] font-light tracking-[1.5px]"
+            style={{
+            borderRadius: "8px",
+          }}
             required
           />
           {/* Right: CTA Button */}
