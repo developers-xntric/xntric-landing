@@ -25,11 +25,11 @@ const clients: Client[] = [
     { image: "/client-2.png", name: "Emma Wilson", designation: "Designer, Company E" },
 ];
 
-export function Testimonials() {
+export function Testimonials({ id }: { id?: string }) {
     const [carouselApi, setCarouselApi] = useState<CarouselApi | null>(null);
 
     return (
-        <div className="relative w-full 2xl:max-w-[1620px] mx-auto md:w-[89.5%] 2xl:w-[84.5%] py-10 space-y-6">
+        <div id={id} className="relative w-full 2xl:max-w-[1620px] mx-auto md:w-[89.5%] 2xl:w-[84.5%] py-10 space-y-6">
             {/* Header Row: Title Left, Controls Right */}
             <div className="flex items-center justify-between px-4 md:px-0 mb-8">
                 <h2 className="text-[50px] leading-[50px] font-bold tracking-[2px] text-white uppercase">

@@ -82,7 +82,13 @@ const cardSets: CardSet[] = [
     }
 ];
 
-export default function CaseStudies({ isPadding = false }) {
+export default function CaseStudies({
+    isPadding = false,
+    id,
+}: {
+    isPadding?: boolean;
+    id?: string;
+}) {
     const [currentPage, setCurrentPage] = useState(0);
 
     const itemsPerPage = 2;
@@ -93,7 +99,7 @@ export default function CaseStudies({ isPadding = false }) {
     );
 
     return (
-        <section className={`${isPadding ? "py-16" : "py-16"}  font-futuru relative overflow-hidden`}>
+        <section id={id} className={`${isPadding ? "py-16" : "py-16"}  font-futuru relative overflow-hidden`}>
 
 
             <div className="absolute bottom-[250px] right-[-500px] -z-10">

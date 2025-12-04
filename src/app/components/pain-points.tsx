@@ -9,7 +9,10 @@ interface IssuesListProps {
   issues?: Issue[];
 }
 
-export function PainPoints({ issues }: IssuesListProps) {
+export function PainPoints({
+  issues,
+  id,
+}: IssuesListProps & { id?: string }) {
   const defaultIssues: Issue[] = [
     { id: "1", title: "Slow load times and poor performance" },
     { id: "2", title: "Outdated UX/UI hurting credibility" },
@@ -23,7 +26,7 @@ export function PainPoints({ issues }: IssuesListProps) {
   const itemsToDisplay = issues || defaultIssues;
 
   return (
-    <div className="relative w-full py-16  overflow-hidden">
+    <div id={id} className="relative w-full py-16  overflow-hidden">
 
       {/* Background Images */}
       <div className="absolute top-[-80px] left-[-550px] -z-10">

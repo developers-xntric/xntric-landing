@@ -1,6 +1,6 @@
-export default function WhyChooseUs() {
+export default function WhyChooseUs({ id }: { id?: string }) {
     return (
-        <section className="relative w-full min-h-[110vh] overflow-hidden flex items-center justify-center px-4 py-20">
+        <section id={id} className="relative w-full min-h-[110vh] overflow-hidden flex items-center justify-center px-4 py-20">
             {/* Heading */}
             <div className="absolute top-8 left-1/2 transform -translate-x-1/2 z-10">
                 <h2 className="text-white text-4xl md:text-5xl font-bold text-center tracking-wide">WHY COMPANIES CHOOSE US</h2>

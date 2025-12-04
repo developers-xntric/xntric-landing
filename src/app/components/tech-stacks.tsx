@@ -675,7 +675,13 @@ const technologies = [
     },
 ];
 
-export default function TechStack({ para }: { para?: string }) {
+export default function TechStack({
+    para,
+    id,
+}: {
+    para?: string;
+    id?: string;
+}) {
     const [currentSlide, setCurrentSlide] = useState(0);
     const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
@@ -719,13 +725,14 @@ export default function TechStack({ para }: { para?: string }) {
 
     return (
         <div
+            id={id}
             className="relative w-full flex flex-col justify-center py-14 md:py-4 px-5"
             onMouseEnter={() => setIsAutoPlaying(false)}
             onMouseLeave={() => setIsAutoPlaying(true)}
         >
 
 
-            <div className="absolute bottom-[-150px] left-[-400px] -z-10">
+            <div className="absolute bottom-[-150px] left-[-400px] -z-50">
                 <Image
                     src="/left-hero-bg.svg"
                     alt="Hero Background"

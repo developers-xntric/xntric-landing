@@ -1,3 +1,5 @@
+
+"use client";
 import Image from "next/image";
 import AboutSection from "./components/about-section";
 import CaseStudies from "./components/case-studies";
@@ -10,7 +12,7 @@ import { ServicesSection } from "./components/services";
 import TechStack from "./components/tech-stacks";
 import { Testimonials } from "./components/testimonials";
 import WhyChooseUs from "./components/why-choose-us";
-
+import { useBallScrollAnimation } from "./components/moving-ball";
 
 
 export const steps4 = [
@@ -59,20 +61,45 @@ export const steps4 = [
 
 
 export default function Home() {
+  useBallScrollAnimation([
+    "hero",
+    "about",
+    "pain",
+    "services",
+    "process",
+    "tech",
+    "case",
+    "why",
+    "testimonials",
+    "faq",
+    "cta"
+  ]);
+
   return (
     <div className="">
-      <Hero />
-      <AboutSection />
-      <PainPoints />
-      <ServicesSection />
-      <OurProcess steps={steps4} />
-      <TechStack />
-      <CaseStudies />
-      <WhyChooseUs />
-      <Testimonials />
+      <div
+        id="floating-ball"
+        className="fixed left-[40%] top-[18%] -translate-x-1/2 
+             w-[60px] h-[60px] md:w-[80px] md:h-[80px] lg:w-[150px] lg:h-[150px]
+             rounded-full bg-linear-to-bl from-[#3BE29A] to-[#00442D3B]
+             opacity-80 -z-30 pointer-events-none
+             flex items-center justify-center"
+      >
+        <div id="ball-content" className="text-center"></div>
+      </div>
+
+      <Hero id="hero" />
+      <AboutSection id="about" />
+      <PainPoints id="pain" />
+      <ServicesSection id="services" />
+      <OurProcess id="process" steps={steps4} />
+      <TechStack id="tech" />
+      <CaseStudies id="case" />
+      <WhyChooseUs id="why" />
+      <Testimonials id="testimonials" />
       <div className="relative overflow-hidden">
         <div className="absolute bottom-[-80px] right-[-550px] -z-10">
-          <Image  
+          <Image
             src="/right-hero-bg.svg"
             alt="Hero Background"
             width={400}
@@ -80,8 +107,8 @@ export default function Home() {
             className="w-full h-full object-cover"
           />
         </div>
-        <FAQSection />
-        <CTASection />
+        <FAQSection id="faq" />
+        <CTASection id="cta" />
       </div>
     </div>
   );

@@ -3,7 +3,7 @@ import Image from "next/image"
 import Link from "next/link"
 import type React from "react"
 import { useState } from "react"
-export function CTASection() {
+export function CTASection({ id }: { id?: string }) {
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -21,7 +21,7 @@ export function CTASection() {
     // Handle form submission here
   }
   return (
-    <section className="pt-2 pb-20 relative overflow-hidden">
+    <section id={id} className="pt-2 pb-20 relative overflow-hidden">
 
      
       <div className="max-w-4xl 2xl:max-w-6xl mx-auto text-center ">

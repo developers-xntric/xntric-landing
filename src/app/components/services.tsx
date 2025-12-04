@@ -68,11 +68,11 @@ const services: ServiceCard[] = [
     },
 ];
 
-export function ServicesSection() {
+export function ServicesSection({ id }: { id?: string }) {
     return (
-        <section className="relative w-full overflow-hidden py-16">
+        <section id={id} className="relative w-full overflow-hidden py-16">
             {/* LEFT BG SVG */}
-            <div className="absolute bottom-[-10px] left-[-300px] -z-10">
+            <div className="absolute bottom-[-10px] left-[-300px] -z-50">
                 <Image
                     src="/left-hero-bg.svg"
                     alt="Hero Background"

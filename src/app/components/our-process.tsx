@@ -127,7 +127,13 @@ function StepCard({ step, index }: { step: Step; index: number }) {
     );
 }
 
-export default function OurProcess({ steps }: { steps?: Step[] }) {
+export default function OurProcess({
+    steps,
+    id,
+}: {
+    steps?: Step[];
+    id?: string;
+}) {
     const pinSectionRef = useRef(null);
     const [isDesktop, setIsDesktop] = useState<boolean | null>(null);
     const [isMounted, setIsMounted] = useState(false);
@@ -176,7 +182,7 @@ export default function OurProcess({ steps }: { steps?: Step[] }) {
     }, []);
 
     return (
-        <div className="md:py-16 font-futuru space-y-6 md:space-y-20">
+        <div id={id} className="md:py-16 font-futuru space-y-6 md:space-y-20">
 
             {/* 🔥 WRAP TITLE + CARDS TO PIN ONLY THIS BLOCK */}
             <div ref={pinSectionRef} className="space-y-20">

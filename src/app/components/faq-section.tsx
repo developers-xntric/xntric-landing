@@ -60,7 +60,7 @@ const faqItems: FAQItem[] = [
   },
 ]
 
-export function FAQSection() {
+export function FAQSection({ id }: { id?: string }) {
   const [expandedId, setExpandedId] = useState<string | null>("0")
 
   const toggleExpand = (id: string) => {
@@ -113,7 +113,7 @@ export function FAQSection() {
   )
 
   return (
-    <div className="w-full py-16 relative">
+    <div id={id} className="w-full py-16 relative">
       {/* Background SVGs */}
       <div className="absolute top-[-50px] left-[-450px] -z-10">
         <Image

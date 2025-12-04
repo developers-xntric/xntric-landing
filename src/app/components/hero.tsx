@@ -2,9 +2,9 @@
 import Link from "next/link";
 import ClientsLogos from "./clients-logos";
 import Image from "next/image";
-const Hero = () => {
+const Hero = ({ id }: { id?: string }) => {
     return (
-        <section className="relative  text-white overflow-hidden ">
+        <section id={id} className="relative  text-white overflow-hidden ">
             {/* Background SVGs */}
             <div className="absolute top-[-80px] left-[-550px] -z-10">
                 <Image
