@@ -32,7 +32,7 @@ const services: ServiceCard[] = [
         title: "Corporate Websites",
         description: "Enterprise Grade",
         tags: ["Scalable Solutions"],
-      image: "/2-service.svg",
+        image: "/2-service.svg",
         href: "#",
         points: [
             "Enterprise-grade,",
@@ -51,7 +51,7 @@ const services: ServiceCard[] = [
             "Shopify",
             "WooCommerce",
             "Custom-Built Ecommerce"
-        ] 
+        ]
     },
     {
         id: "4",
@@ -85,7 +85,13 @@ export function ServicesSection({ id }: { id?: string }) {
             <div className="relative z-10 2xl:max-w-[1740px] mx-auto md:w-[89%] 2xl:w-[85%]">
                 {/* Heading */}
                 <div className="mb-16 text-center">
-                    <h2 className="text-[50px] leading-[50px] font-bold tracking-[2px] text-white text-center max-w-[800px] mx-auto">
+                    <h2 style={{
+                        fontFamily: "Futuru",
+                        background: "linear-gradient(264deg, #00AA71 0%, #FFF 36.57%)",
+                        backgroundClip: "text",
+                        WebkitBackgroundClip: "text",
+                        WebkitTextFillColor: "transparent",
+                    }} className="text-[50px] leading-[50px] font-bold tracking-[2px] text-white text-center max-w-[800px] mx-auto">
                         COMPLETE WEBSITE SOLUTIONS <br /> FOR EVERY BUSINESS SIZE
                     </h2>
                 </div>
@@ -122,7 +128,7 @@ export function ServicesSection({ id }: { id?: string }) {
                                 className="inline-block w-fit px-6 pb-2 pt-1 tracking-[1.5px] rounded-md text-white uppercase bg-[#00AA71] hover:bg-transparent hover:text-[#00AA71] hover:border-[#00AA71] hover:border transition text-[14px]"
                             >
                                 Learn More
-                            </Link> 
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -150,7 +156,7 @@ export function ServicesSection({ id }: { id?: string }) {
                             </div>
 
                             {/* Description */}
-                          <div className="flex flex-col gap-1 mt-4">
+                            <div className="flex flex-col gap-1 mt-4">
                                 {service.points.map((point, idx) => (
                                     <p key={idx} className="text-[16px] text-white tracking-[1.5px]">
                                         {point}
@@ -159,7 +165,7 @@ export function ServicesSection({ id }: { id?: string }) {
                             </div>
 
                             {/* Learn More */}
-                             <Link
+                            <Link
                                 href="#"
                                 className=" w-fit text-[14px] px-6 pb-2 pt-1 tracking-[1.5px] rounded-md text-white uppercase bg-[#00AA71] hover:bg-transparent hover:text-[#00AA71] hover:border-[#00AA71] hover:border transition"
                             >

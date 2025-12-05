@@ -124,8 +124,14 @@ export function FAQSection({ id }: { id?: string }) {
           className="w-[90%] h-full object-cover"
         />
       </div>
-      <h2 className="text-[50px] leading-[50px] font-bold tracking-[2px] text-white text-center max-w-[800px] mx-auto uppercase mb-14">
-        FREQUENTLY ASKED QUESTIONS
+      <h2 style={{
+        fontFamily: "Futuru",
+        background: "linear-gradient(264deg, #00AA71 0%, #FFF 36.57%)",
+        backgroundClip: "text",
+        WebkitBackgroundClip: "text",
+        WebkitTextFillColor: "transparent",
+      }} className="text-[50px]  mb-12 font-bold tracking-[2px] text-white text-center max-w-[800px] mx-auto uppercase">
+        Frequently Asked Questions
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 2xl:max-w-[1620px] mx-auto md:w-[89.5%] 2xl:w-[84.5%]">

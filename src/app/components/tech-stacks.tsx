@@ -730,8 +730,6 @@ export default function TechStack({
             onMouseEnter={() => setIsAutoPlaying(false)}
             onMouseLeave={() => setIsAutoPlaying(true)}
         >
-
-
             <div className="absolute bottom-[-150px] left-[-400px] -z-50">
                 <Image
                     src="/left-hero-bg.svg"
@@ -746,7 +744,13 @@ export default function TechStack({
             <div className="relative z-10 2xl:max-w-[1740px] mx-auto md:w-[91.5%] 2xl:w-[92.5%]">
                 {/* Section Header */}
                 <div className="text-center md:mb-16 mb-12 lg:space-y-6">
-                    <h2 className="text-[50px] leading-[50px] font-bold tracking-[2px] text-white text-center max-w-[800px] mx-auto uppercase">
+                    <h2 style={{
+                        fontFamily: "Futuru",
+                        background: "linear-gradient(264deg, #00AA71 0%, #FFF 56.57%)",
+                        backgroundClip: "text",
+                        WebkitBackgroundClip: "text",
+                        WebkitTextFillColor: "transparent",
+                    }} className="text-[50px] leading-[50px] font-bold tracking-[2px] text-white text-center max-w-[800px] mx-auto uppercase">
                         Technology STACK
                     </h2>
                     <p className="self-stretch text-center justify-start text-white/80 text-[14px] lg:text-xl font-light tracking-[2px] font-futuru leading-[27px]">

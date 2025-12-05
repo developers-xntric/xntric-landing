@@ -39,13 +39,13 @@ export function PainPoints({
         />
       </div>
 
-      <div className="absolute bottom-[-14px] right-[-550px] -z-10">
+      <div className="absolute bottom-[25px] right-[-400px] -z-10">
         <Image
           src="/right-hero-bg.svg"
           alt="Right Background"
           width={400}
           height={400}
-          className="w-full h-full object-cover"
+          className="w-[85%] h-full object-cover"
         />
       </div>
 

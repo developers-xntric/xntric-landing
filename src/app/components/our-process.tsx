@@ -50,9 +50,9 @@ function StepCard({ step, index }: { step: Step; index: number }) {
                     scrollTrigger: {
                         trigger: cardRef.current,
                         start: isDesktop ? "top 8%" : "top bottom",
-                        end: isDesktop ? "bottom top" : "bottom top",
+                        end: isDesktop ? "bottom -90%" : "bottom top",
                         toggleActions: "play reverse play reverse",
-                        scrub: isDesktop ? 5 : false,
+                        scrub: isDesktop ? 1.7 : false,
                         refreshPriority: 1,
                         invalidateOnRefresh: true,
                     },
@@ -60,11 +60,11 @@ function StepCard({ step, index }: { step: Step; index: number }) {
 
                 tl.to(cardRef.current, {
                     opacity: 1,
-                    duration: isDesktop ? 2 : 1,
+                    duration: isDesktop ? 20 : 1,
                     ease: "power2.out",
-                    delay: isDesktop ? (index - 1) * 2 : (index - 1) * 0.5,
+                    delay: isDesktop ? (index - 1) * 10 : (index - 1) * 0.5,
                 });
-            }, 100);
+            }, 150);
 
             return () => {
                 clearTimeout(timer);
@@ -162,7 +162,7 @@ export default function OurProcess({
                     pin: true,
                     pinSpacing: true,
                     anticipatePin: 1,
-                    scrub: 1,
+                    scrub: 1.07,
                     refreshPriority: 0,
                     markers: false,
                     invalidateOnRefresh: true,
@@ -189,7 +189,13 @@ export default function OurProcess({
 
                 {/* Title */}
                 <div className="px-6">
-                    <h2 className="text-[50px] leading-[50px] font-bold tracking-[2px] text-white text-center max-w-[800px] mx-auto uppercase">
+                    <h2 style={{
+                        fontFamily: "Futuru",
+                        background: "linear-gradient(264deg, #00AA71 0%, #FFF 36.57%)",
+                        backgroundClip: "text",
+                        WebkitBackgroundClip: "text",
+                        WebkitTextFillColor: "transparent",
+                    }} className="text-[50px] leading-[50px] font-bold tracking-[2px] text-white text-center max-w-[800px] mx-auto uppercase">
                         Our Proven Website<br /> Development Process
                     </h2>
                 </div>

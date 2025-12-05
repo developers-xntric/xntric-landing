@@ -23,10 +23,17 @@ export function CTASection({ id }: { id?: string }) {
   return (
     <section id={id} className="pt-2 pb-20 relative overflow-hidden">
 
-     
+
       <div className="max-w-4xl 2xl:max-w-6xl mx-auto text-center ">
         {/* Heading */}
-        <h2 className="text-[50px] leading-[50px] font-bold tracking-[2px] text-white text-center max-w-[800px] mx-auto uppercase pb-4" style={{ color: "white" }}>
+        <h2 style={{
+          fontFamily: "Futuru",
+          background: "linear-gradient(264deg, #00AA71 0%, #FFF 36.57%)",
+          backgroundClip: "text",
+          WebkitBackgroundClip: "text",
+          WebkitTextFillColor: "transparent",
+        }} 
+        className="text-[50px] leading-[50px] font-bold tracking-[2px] text-white text-center max-w-[800px] mx-auto uppercase pb-4">
           READY TO BUILD A WEBSITE THAT DRIVES GROWTH?
         </h2>
         {/* Subheading */}

@@ -32,7 +32,13 @@ export function Testimonials({ id }: { id?: string }) {
         <div id={id} className="relative w-full 2xl:max-w-[1620px] mx-auto md:w-[89.5%] 2xl:w-[84.5%] py-10 space-y-6">
             {/* Header Row: Title Left, Controls Right */}
             <div className="flex items-center justify-between px-4 md:px-0 mb-8">
-                <h2 className="text-[50px] leading-[50px] font-bold tracking-[2px] text-white uppercase">
+                <h2 style={{
+                        fontFamily: "Futuru",
+                        background: "linear-gradient(264deg, #00AA71 0%, #FFF 36.57%)",
+                        backgroundClip: "text",
+                        WebkitBackgroundClip: "text",
+                        WebkitTextFillColor: "transparent",
+                    }} className="text-[50px] leading-[50px] font-bold tracking-[2px] text-white uppercase">
                     What Our Clients Say
                 </h2>
 

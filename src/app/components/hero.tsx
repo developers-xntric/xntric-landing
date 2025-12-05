@@ -28,7 +28,7 @@ const Hero = ({ id }: { id?: string }) => {
             <div className=" 2xl:max-w-[1380px] mx-auto md:w-[80%] py-24 flex flex-col lg:flex-row items-center justify-between gap-5 2xl:gap-0  ">
                 {/* Left Content */}
                 <div className="lg:w-2/3 space-y-6">
-                    <h1 className="text-4xl md:text-[60px] 2xl:text-[75px] font-bold md:leading-[55px] 2xl:leading-[75px] uppercase max-w-[600px] 2xl:max-w-[700px]">
+                    <h1 className="text-4xl lg:text-[50px] xl:text-[60px] 2xl:text-[75px] font-bold md:leading-[55px] 2xl:leading-[75px] uppercase max-w-[600px] 2xl:max-w-[700px]">
                         High-Performance <br /> Websites Designed for Growth.
                     </h1>
                     <p className="text-[20px] text-white font-light tracking-[1.5px]">
@@ -38,7 +38,7 @@ const Hero = ({ id }: { id?: string }) => {
                     <div className="flex gap-4">
                         <Link
                             href="#"
-                            className="px-8 2xl:px-12 pb-3 pt-3 tracking-[1.5px] rounded-md text-white 2xl:text-[18px] transition uppercase bg-[#00AA71] hover:bg-transparent hover:text-[#00AA71] hover:border-[#00AA71] hover:border"
+                            className="px-8  2xl:px-12 pb-3 pt-3 tracking-[1.5px] rounded-md text-white 2xl:text-[18px] transition uppercase bg-[#00AA71] hover:bg-transparent hover:text-[#00AA71] hover:border-[#00AA71] hover:border"
 
                         >
                             Book a Free Consultation
@@ -54,7 +54,7 @@ const Hero = ({ id }: { id?: string }) => {
                 </div>
 
                 {/* Right Form with Glass Effect */}
-             <div className="
+                <div className="
     relative lg:w-1/2 
     bg-linear-to-r from-white/10 to-transparent 
     backdrop-blur-xl rounded-[20px] 
@@ -67,7 +67,13 @@ const Hero = ({ id }: { id?: string }) => {
     before:-translate-x-1/2 before:-translate-y-1/2
 ">
 
-                    <h2 className="text-4xl md:text-[40px] font-bold uppercase text-center">LET'S GET STARTED</h2>
+                    <h2 style={{
+                        fontFamily: "Futuru",
+                        background: "linear-gradient(264deg, #00AA71 0%, #FFF 36.57%)",
+                        backgroundClip: "text",
+                        WebkitBackgroundClip: "text",
+                        WebkitTextFillColor: "transparent",
+                    }} className="text-4xl md:text-[40px] font-bold uppercase text-center">LET'S GET STARTED</h2>
                     <form className="space-y-4 w-full">
                         <div className="flex gap-4">
 
@@ -100,7 +106,7 @@ const Hero = ({ id }: { id?: string }) => {
                             <Link
                                 href="#"
                                 type="submit"
-                                className="px-12 pb-3 pt-2 tracking-[1.5px] rounded-md text-white text-[18px] transition uppercase bg-[#00AA71] text-center hover:bg-transparent hover:text-[#00AA71] hover:border-[#00AA71] hover:border w-full"
+                                className="px-12 pb-3 pt-2 tracking-[1.5px] rounded-md text-white xl:text-[18px] transition uppercase bg-[#00AA71] text-center hover:bg-transparent hover:text-[#00AA71] hover:border-[#00AA71] hover:border w-full"
 
                             >
                                 Book a Free Consultation

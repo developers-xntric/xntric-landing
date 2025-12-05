@@ -114,7 +114,13 @@ export default function CaseStudies({
 
             <div className="2xl:max-w-[1620px] mx-auto md:w-[89.5%] 2xl:w-[84.5%]">
 
-                <h2 className="text-[50px] leading-[50px] font-bold tracking-[2px] text-white uppercase text-center mb-6">
+                <h2 style={{
+                        fontFamily: "Futuru",
+                        background: "linear-gradient(264deg, #00AA71 0%, #FFF 56.57%)",
+                        backgroundClip: "text",
+                        WebkitBackgroundClip: "text",
+                        WebkitTextFillColor: "transparent",
+                    }} className="text-[50px] leading-[50px] font-bold tracking-[2px] text-white uppercase text-center mb-6">
                     Projects That Deliver Results
                 </h2>
 

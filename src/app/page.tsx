@@ -80,7 +80,7 @@ export default function Home() {
       <div
         id="floating-ball"
         className="fixed left-[40%] top-[18%] -translate-x-1/2 
-             w-[60px] h-[60px] md:w-[80px] md:h-[80px] lg:w-[150px] lg:h-[150px]
+            //  w-[60px] h-[60px] md:w-20 md:h-20 lg:w-[150px] lg:h-[150px]
              rounded-full bg-linear-to-bl from-[#3BE29A] to-[#00442D3B]
              opacity-80 -z-30 pointer-events-none
              flex items-center justify-center"
