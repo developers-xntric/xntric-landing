@@ -15,7 +15,7 @@ export function useBallScrollAnimation(sectionIds: string[]) {
 
     if (!ball || !content) return;
 
-    sectionIds.forEach((id, index) => {
+    sectionIds.forEach((id) => {
       const el = document.getElementById(id);
       if (!el) return;
 

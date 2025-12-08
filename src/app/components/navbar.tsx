@@ -7,7 +7,7 @@ export default function Navbar() {
     <nav className="w-full flex justify-between items-center py-4 px-6 2xl:max-w-[1740px] mx-auto md:w-[92%] 2xl:w-[87%] bg-black">
       
       {/* Left: Logo */}
-      <div className="flex items-center">
+      <Link href={"/"} className="flex items-center">
         <Image 
           src="/logo.svg"  
           alt="Logo"
@@ -15,7 +15,7 @@ export default function Navbar() {
           height={400}
           className="w-40 h-20"
         />
-      </div>
+      </Link>
 
       {/* Right: CTA Button */}
       <div>
