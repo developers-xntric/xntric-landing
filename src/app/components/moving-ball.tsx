@@ -244,9 +244,9 @@ export function useBallScrollAnimation(sectionIds: string[]) {
             const progress = self.progress;
 
             const startX = -150;
-            const endX = 100;
+            const endX = 55;
             const startY = 0;
-            const endY = 85;
+            const endY = 51;
             const startSize = 25;
             const endSize = 40;
 
@@ -271,7 +271,6 @@ export function useBallScrollAnimation(sectionIds: string[]) {
         });
       }
 
-      // [Rest of your sections remain the same - services, process, tech, case, why, testimonials, faq]
       // I'll include them for completeness but they're unchanged
 
       if (id === "services") {
@@ -300,9 +299,9 @@ export function useBallScrollAnimation(sectionIds: string[]) {
           },
           onUpdate: (self) => {
             const progress = self.progress;
-            const startX = 85;
+            const startX = 55;
             const endX = -100;
-            const startY = 85;
+            const startY = 51;
             const endY = 10;
             const startSize = 40;
             const endSize = 35;
@@ -311,11 +310,14 @@ export function useBallScrollAnimation(sectionIds: string[]) {
             const newY = startY + (endY - startY) * progress;
             const newSize = startSize + (endSize - startSize) * progress;
 
-            gsap.set(ball, {
+            gsap.to(ball, {
               x: `${newX}%`,
               y: `${newY}%`,
               width: `${newSize}vw`,
               height: `${newSize}vw`,
+              duration: 0.7,
+              ease: "power1.out",
+              overwrite: "auto",
             });
 
             content.innerHTML = "";
@@ -360,14 +362,15 @@ export function useBallScrollAnimation(sectionIds: string[]) {
             const newX = startX + (endX - startX) * progress;
             const newY = startY + (endY - startY) * progress;
             const newSize = startSize + (endSize - startSize) * progress;
-
-            gsap.set(ball, {
+            gsap.to(ball, {
               x: `${newX}%`,
               y: `${newY}%`,
               width: `${newSize}vw`,
               height: `${newSize}vw`,
+              duration: 0.35,
+              ease: "power1.out",
+              overwrite: "auto",
             });
-
             content.innerHTML = "";
           },
         });
@@ -378,7 +381,7 @@ export function useBallScrollAnimation(sectionIds: string[]) {
           trigger: el,
           start: "top 55%",
           end: "bottom 80%",
-          scrub: 0.7,
+          scrub: 1.7,
           onEnter: () => {
             gsap.to(ball, {
               background: "linear-gradient(270deg, #3BE29A, #3BE29A00)",
@@ -410,11 +413,14 @@ export function useBallScrollAnimation(sectionIds: string[]) {
             const newY = startY + (endY - startY) * progress;
             const newSize = startSize + (endSize - startSize) * progress;
 
-            gsap.set(ball, {
+            gsap.to(ball, {
               x: `${newX}%`,
               y: `${newY}%`,
               width: `${newSize}vw`,
               height: `${newSize}vw`,
+              duration: 1.36,
+              ease: "power1.out",
+              overwrite: "auto",
             });
 
             content.innerHTML = "";
@@ -459,11 +465,14 @@ export function useBallScrollAnimation(sectionIds: string[]) {
             const newY = startY + (endY - startY) * progress;
             const newSize = startSize + (endSize - startSize) * progress;
 
-            gsap.set(ball, {
+            gsap.to(ball, {
               x: `${newX}%`,
               y: `${newY}%`,
               width: `${newSize}vw`,
               height: `${newSize}vw`,
+              duration: 0.7,
+              ease: "power1.out",
+              overwrite: "auto",
             });
 
             content.innerHTML = "";
@@ -546,11 +555,14 @@ export function useBallScrollAnimation(sectionIds: string[]) {
             const newY = startY + (endY - startY) * progress;
             const newSize = startSize + (endSize - startSize) * progress;
 
-            gsap.set(ball, {
+            gsap.to(ball, {
               x: `${newX}%`,
               y: `${newY}%`,
               width: `${newSize}vw`,
               height: `${newSize}vw`,
+              duration: 0.7,
+              ease: "power1.out",
+              overwrite: "auto",
             });
 
             if (progress < 0.25) {
@@ -607,11 +619,14 @@ export function useBallScrollAnimation(sectionIds: string[]) {
             const newY = startY + (endY - startY) * progress;
             const newSize = startSize + (endSize - startSize) * progress;
 
-            gsap.set(ball, {
+            gsap.to(ball, {
               x: `${newX}%`,
               y: `${newY}%`,
               width: `${newSize}vw`,
               height: `${newSize}vw`,
+              duration: 0.7,
+              ease: "power1.out",
+              overwrite: "auto",
             });
 
             content.innerHTML = "";
@@ -653,11 +668,14 @@ export function useBallScrollAnimation(sectionIds: string[]) {
             const newY = startY + (endY - startY) * progress;
             const newSize = startSize + (endSize - startSize) * progress;
 
-            gsap.set(ball, {
+            gsap.to(ball, {
               x: `${newX}%`,
               y: `${newY}%`,
               width: `${newSize}vw`,
               height: `${newSize}vw`,
+              duration: 1.4,
+              ease: "power1.out",
+              overwrite: "auto",
             });
 
             content.innerHTML = "";

@@ -8,19 +8,30 @@ export default function WhyChooseUs({ id }: { id?: string }) {
 
             {/* Main Container for Circles */}
             <div className="relative w-full max-w-4xl h-96 md:h-[500px] flex items-center justify-center">
-                {/* Central Large Circle - 70% Better User Experience */}
-                <div className="absolute inset-0 flex items-center justify-center animate-heartbeat">
-                    <div className="w-[405px] h-[405px] xl:w-[35vw] xl:h-[65vh] 2xl:w-[600px] 2xl:h-[600px] rounded-full bg-linear-to-br from-white via-white to-[#A1A1A14D] flex flex-col items-center justify-center shadow-2xl">
-                        <div className="text-center px-0 flex flex-col -space-y-6 2xl:-space-y-6">
-                            <div className="text-[25px] md:text-[25px] xl:text-[35px] 2xl:text-[40px] uppercase text-black font-medium">70% Better User </div>
-                            <div className="text-[25px] md:text-[65px] 2xl:text-[80px] uppercase font-bold text-black">Experience</div>
-                            <div className="text-[25px] md:text-[25px] xl:text-[35px] 2xl:text-[35px] uppercase text-black mt-2 font-medium">(Based on UX Score Metrics)</div>
-                            <p className="text-[17px] md:text-[14px] 2xl:text-[17px] font-regular text-black mt-10 leading-tight font-futuru tracking-[1px] w-[80%] 2xl:w-[80%] mx-auto">
-                                Through optimized navigation, mobile-first architecture, and simplified interaction patterns, clients benefit from a 70% improvement in overall user experience, measured across engagement, bounce rate, and task completion time.
-                            </p>
+                {/* Central Large Circle */}
+                <div className="absolute inset-0 flex items-center justify-center ">
+                    {/* Circle background - scale this */}
+                    <div
+                        className="w-[405px] h-[405px] xl:w-[35vw] xl:h-[65vh] 2xl:w-[600px] 2xl:h-[600px] rounded-full bg-linear-to-br from-white via-white to-[#A1A1A14D] shadow-2xl animate-heartbeat"
+                    ></div>
+
+                    {/* Content - absolutely centered so it doesn't scale */}
+                    <div className="absolute flex flex-col items-center justify-center text-center px-4 -space-y-6 2xl:-space-y-6  w-[60%] 2xl:w-[70%]">
+                        <div className="text-[25px] md:text-[25px] xl:text-[35px] 2xl:text-[40px] uppercase text-black font-medium">
+                            70% Better User
                         </div>
+                        <div className="text-[25px] md:text-[65px] 2xl:text-[80px] uppercase font-bold text-black">
+                            Experience
+                        </div>
+                        <div className="text-[25px] md:text-[25px] xl:text-[35px] 2xl:text-[35px] uppercase text-black mt-2 font-medium">
+                            (Based on UX Score Metrics)
+                        </div>
+                        <p className="text-[17px] md:text-[14px] 2xl:text-[17px] font-regular text-black mt-10 leading-tight font-futuru tracking-[1px] w-[80%] 2xl:w-[80%] mx-auto">
+                            Through optimized navigation, mobile-first architecture, and simplified interaction patterns, clients benefit from a 70% improvement in overall user experience, measured across engagement, bounce rate, and task completion time.
+                        </p>
                     </div>
                 </div>
+
 
                 {/* Top Left Circle - Fast Delivery Timeline */}
 
