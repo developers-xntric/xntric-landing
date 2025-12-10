@@ -26,9 +26,9 @@ export function useBallScrollAnimation(sectionIds: string[]) {
         ScrollTrigger.create({
           trigger: el,
           start: "top 3%",
-          end: "bottom 70%",
+          end: "bottom 40%",
           scrub: 1.7,
-          markers: false,
+          markers: true,
           onEnter: () => gsap.to(ball, { opacity: 1, duration: 0.3 }),
           onUpdate: (self) => {
            const progress = self.progress;
@@ -227,7 +227,7 @@ export function useBallScrollAnimation(sectionIds: string[]) {
           start: "top 12%",
           end: "bottom 100%",
           scrub: 1.7,
-          markers: true,
+          markers: false,
           onEnter: () => {
             gsap.to(ball, {
               background: "linear-gradient(30deg, #0A4B35, #29DA9F)",
