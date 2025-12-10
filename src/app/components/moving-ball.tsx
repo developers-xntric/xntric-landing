@@ -259,6 +259,9 @@ export function useBallScrollAnimation(sectionIds: string[]) {
               y: `${newY}%`,
               width: `${newSize}vw`,
               height: `${newSize}vw`,
+              duration: 10.7,
+              ease: "power1.out",
+              overwrite: "auto",
             });
 
             const opacity = 1 - progress;
@@ -432,8 +435,9 @@ export function useBallScrollAnimation(sectionIds: string[]) {
         ScrollTrigger.create({
           trigger: el,
           start: "top top",
-          end: "bottom 80%",
+          end: "bottom 110%",
           scrub: 1,
+          markers: true,
           onEnter: () => {
             gsap.to(ball, {
               background: "linear-gradient(270deg, #3BE29A, #3BE29A00)",
@@ -455,9 +459,9 @@ export function useBallScrollAnimation(sectionIds: string[]) {
           onUpdate: (self) => {
             const progress = self.progress;
             const startX = -90;
-            const endX = 85;
+            const endX = 20;
             const startY = 40;
-            const endY = 20;
+            const endY = -20;
             const startSize = 35;
             const endSize = 40;
 
@@ -481,117 +485,99 @@ export function useBallScrollAnimation(sectionIds: string[]) {
       }
 
       if (id === "why") {
+        const ball = document.getElementById("floating-ball");
+        const content = document.getElementById("ball-content");
+
+        if (!ball || !content) return;
+
+        // Start position comes from previous section end
+        const prevX = parseFloat(ball.dataset.lastX || "20"); 
+        const prevY = parseFloat(ball.dataset.lastY || "-35");
+
+        const startX = prevX;
+        const startY = prevY;
+
+        const endX = -10; // center X for full-screen
+        const endY = 10; // center Y for full-screen
+
+        const startSize = 40; // initial vw
+        const endSize = 480; // full-screen vw
+
         ScrollTrigger.create({
           trigger: el,
-          start: "top 45%",
-          end: "bottom 80%",
-          scrub: 0.7,
-
-          onEnter: () => {
-            gsap.to(ball, {
-              background: "linear-gradient(270deg, #3BE29A, #3BE29A00)",
-              duration: 0.4,
-            });
-
-            gsap.to(el, {
-              background: "linear-gradient(200deg, #3BE29A, #00442D3B)",
-              opacity: 1,
-              duration: 0.4,
-            });
-          },
-
-          onEnterBack: () => {
-            gsap.to(ball, {
-              background: "linear-gradient(270deg, #3BE29A, #3BE29A00)",
-              duration: 0.4,
-            });
-
-            gsap.to(el, {
-              background: "linear-gradient(270deg, #3BE29A, #3BE29A00)",
-              opacity: 1,
-              duration: 0.4,
-            });
-          },
-
-          onLeaveBack: () => {
-            gsap.to(ball, {
-              opacity: 1,
-              background: "linear-gradient(270deg, #3BE29A, #3BE29A00)",
-              duration: 0.4,
-            });
-
-            gsap.to(el, {
-              background: "transparent",
-              opacity: 0,
-              duration: 0.4,
-            });
-          },
-
-          onLeave: () => {
-            // THIS REMOVES WHY section BG when scrolling down to TESTIMONIALS
-            gsap.to(el, {
-              background: "transparent",
-              duration: 0.4,
-            });
-
-            gsap.to(ball, {
-              opacity: 1,
-              scale: 1,
-              duration: 0.8,
-            });
-
-          },
-
+          start: "top 80%",
+          end: "bottom 70%",
+          scrub: 1.7,
+          markers: false,
           onUpdate: (self) => {
-            const progress = self.progress;
-            const startX = 85;
-            const endX = -90;
-            const startY = 20;
-            const endY = 40;
-            const startSize = 40;
-            const endSize = 35;
+            const progress = gsap.utils.clamp(0, 1, self.progress);
 
-            const newX = startX + (endX - startX) * progress;
-            const newY = startY + (endY - startY) * progress;
-            const newSize = startSize + (endSize - startSize) * progress;
+            // Smooth interpolation
+            const size = startSize + (endSize - startSize) * progress;
+            const x = startX + (endX - startX) * progress;
+            const y = startY + (endY - startY) * progress;
 
             gsap.to(ball, {
-              x: `${newX}%`,
-              y: `${newY}%`,
-              width: `${newSize}vw`,
-              height: `${newSize}vw`,
+              x: `${x}%`,
+              y: `${y}%`,
+              width: `${size}vw`,
+              height: `${size}vw`,
+              translateX: "-50%",
+              translateY: "-50%",
+              background: "linear-gradient(270deg, #3BE29A, #3BE29A00)",
+              opacity: progress < 0.99 ? 1 : 1, // hide when full-screen
               duration: 0.7,
               ease: "power1.out",
               overwrite: "auto",
             });
 
-            if (progress < 0.25) {
-              const scaleVal = gsap.utils.mapRange(0, 0.25, 1, 4, progress);
-              gsap.set(ball, {
-                scale: scaleVal,
-                opacity: 1 - progress * 4,
-              });
-            }
-
-            if (progress > 0.85) {
-              gsap.to(ball, {
-                opacity: (progress - 0.85) * 5,
-                scale: 1,
-                duration: 0.2,
-              });
-            }
-
             content.innerHTML = "";
+          },
+
+          onLeave: () => {
+            // Store ending position for the next ball
+            // ball.dataset.lastX = `${endX}`;
+            // ball.dataset.lastY = `${endY}`;
+            gsap.to(ball, {
+              x: `${endX}%`,
+              y: `${endY}%`,
+              width: `${endSize}vw`,
+              height: `${endSize}vw`,
+              translateX: "-50%",
+              translateY: "-50%",
+              background: "linear-gradient(270deg, #3BE29A, #3BE29A00)",
+              duration: 0.7,
+              ease: "power1.out",
+              overwrite: "auto",
+            });
+          },
+
+          onEnterBack: () => {
+            // When scrolling back, start from previous position
+            gsap.to(ball, {
+              x: `${startX}%`,
+              y: `${startY}%`,
+              width: `${startSize}vw`,
+              height: `${startSize}vw`,
+              translateX: "-50%",
+              translateY: "-50%",
+              opacity: 1,
+              duration: 0.7,
+              ease: "power1.out",
+              overwrite: "auto",
+            });
           },
         });
       }
 
+
       if (id === "testimonials") {
         ScrollTrigger.create({
           trigger: el,
-          start: "top 55%",
+          start: "top 68%",
           end: "bottom 80%",
-          scrub: 0.7,
+          scrub: 1.7,
+          markers: false,
 
           onEnter: () => {
             gsap.to(ball, {
@@ -608,9 +594,9 @@ export function useBallScrollAnimation(sectionIds: string[]) {
 
           onUpdate: (self) => {
             const progress = self.progress;
-            const startX = -90;
+            const startX = -110;
             const endX = 140;
-            const startY = 40;
+            const startY = 80;
             const endY = 40;
             const startSize = 35;
             const endSize = 35;
@@ -682,7 +668,6 @@ export function useBallScrollAnimation(sectionIds: string[]) {
           },
         });
       }
-
 
 
     });
