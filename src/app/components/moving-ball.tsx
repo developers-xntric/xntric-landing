@@ -28,7 +28,7 @@ export function useBallScrollAnimation(sectionIds: string[]) {
           start: "top 3%",
           end: "bottom 40%",
           scrub: 1.7,
-          markers: true,
+          markers: false,
           onEnter: () => gsap.to(ball, { opacity: 1, duration: 0.3 }),
           onUpdate: (self) => {
            const progress = self.progress;
