@@ -68,10 +68,10 @@ export function PainPoints({ issues, id }: { issues?: Issue[]; id?: string }) {
             <div
               key={issue.id}
               className="
-          px-5 pb-5 pt-4 rounded-xl text-white text-[20px] 2xl:text-[25px]
+          px-5 pb-5 pt-4 rounded-xl text-white text-[20px] 2xl:text-[22px]
           tracking-[2px] border-t border-b border-e border-[#FFFDFD42]
           bg-white/10 backdrop-blur-xl font-light
-          w-full sm:w-[80%] md:w-[100%] lg:w-[90%]
+          w-full sm:w-[80%] md:w-full lg:w-[90%]
         "
             >
               {issue.title}

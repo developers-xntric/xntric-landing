@@ -79,8 +79,8 @@ export default function Home() {
     <div className="">
       <div
         id="floating-ball"
-        className="fixed left-[40%] top-[18%] -translate-x-1/2 
-            w-[60px] h-[60px] md:w-20 md:h-20 lg:w-[150px] lg:h-[150px]
+        className="fixed left-[45%] top-[19%] -translate-x-1/2 
+            w-[60px] h-[60px] md:w-20 md:h-20 lg:w-[150px] lg:h-[150px] 2xl:w-[150px] 2xl:h-[150px]
              rounded-full bg-linear-to-bl from-[#3BE29A] to-[#00442D3B]
              opacity-80 -z-30 pointer-events-none
              flex items-center justify-center"
@@ -91,11 +91,11 @@ export default function Home() {
       <Hero id="hero" />
       {/* <AboutSection id="about" /> */}
       <PainPoints id="pain" />
+      <WhyChooseUs id="why" />
       <ServicesSection id="services" />
       <OurProcess id="process" steps={steps4} />
       <TechStack id="tech" />
       <CaseStudies id="case" />
-      <WhyChooseUs id="why" />
       <Testimonials id="testimonials" />
       <div className="relative overflow-hidden">
         <div className="absolute -bottom-20 right-[-550px] -z-10">

@@ -25,39 +25,45 @@ export function useBallScrollAnimation(sectionIds: string[]) {
       if (id === "hero") {
         ScrollTrigger.create({
           trigger: el,
-          start: "top top",
-          end: "bottom 10%",
-          scrub: 0.7,
+          start: "top 3%",
+          end: "bottom 70%",
+          scrub: 1.7,
           markers: false,
           onEnter: () => gsap.to(ball, { opacity: 1, duration: 0.3 }),
-
           onUpdate: (self) => {
-            const p = self.progress;
+           const progress = self.progress;
 
-            const newX = 40 + p * 70;
-            const newY = 18 + p * -50;
+            const startX = 10;
+            const endX = -120;
+            const startY = 0;
+            const endY = -23;
+            const startSize = 25;
+            const endSize = 25;
 
-            const startSize = 150;
-            const endSize = 300;
-            const size = startSize + (endSize - startSize) * p;
+            const newX = startX + (endX - startX) * progress;
+            const newY = startY + (endY - startY) * progress;
+            const newSize = startSize + (endSize - startSize) * progress;
 
-            gsap.set(ball, {
+            gsap.to(ball, {
               x: `${newX}%`,
               y: `${newY}%`,
-              width: `${size}px`,
-              height: `${size}px`,
+              width: `${newSize}vw`,
+              height: `${newSize}vw`,
+              duration: 0.7,
+              ease: "power1.out",
+              overwrite: "auto",
             });
-
             content.innerHTML = "";
           },
+         
 
           onLeaveBack: () => {
             gsap.to(ball, {
-              x: "40%",
-              y: "18%",
+              x: "8%",
+              y: "-2%",
               width: "150px",
               height: "150px",
-              duration: 0.5,
+              duration: 0.9,
               ease: "power3.out",
             });
           },
@@ -218,14 +224,15 @@ export function useBallScrollAnimation(sectionIds: string[]) {
       if (id === "pain") {
         ScrollTrigger.create({
           trigger: el,
-          start: "top center",
-          end: "bottom 40%",
+          start: "top 12%",
+          end: "bottom 100%",
           scrub: 1.7,
-          markers: false,
+          markers: true,
           onEnter: () => {
             gsap.to(ball, {
               background: "linear-gradient(30deg, #0A4B35, #29DA9F)",
               duration: 0.5,
+              
             });
           },
           onEnterBack: () => {
@@ -243,28 +250,28 @@ export function useBallScrollAnimation(sectionIds: string[]) {
           onUpdate: (self) => {
             const progress = self.progress;
 
-            const startX = -150;
-            const endX = 55;
-            const startY = 0;
-            const endY = 51;
-            const startSize = 25;
-            const endSize = 40;
+            const startX = -100;
+            const endX = -80;
+            const startY = -23;
+            const endY = 10;
+            const startSize = 28;
+            const endSize = 30;
 
             const newX = startX + (endX - startX) * progress;
             const newY = startY + (endY - startY) * progress;
             const newSize = startSize + (endSize - startSize) * progress;
 
-            gsap.set(ball, {
+            gsap.to(ball, {
               x: `${newX}%`,
               y: `${newY}%`,
               width: `${newSize}vw`,
               height: `${newSize}vw`,
-              duration: 10.7,
+              duration: 0.7,
               ease: "power1.out",
               overwrite: "auto",
             });
 
-            const opacity = 1 - progress;
+            const opacity = 2 - progress;
             content.innerHTML = `
               <p class="text-[4vw] md:text-[3vw] lg:text-[2.5vw] font-bold text-center tracking-[1.5px] uppercase w-[80%] mx-auto leading-[1.2em] text-white" style="opacity: ${opacity}">
                 Is Your Website Holding Your Business Back?
@@ -491,13 +498,13 @@ export function useBallScrollAnimation(sectionIds: string[]) {
         if (!ball || !content) return;
 
         // Start position comes from previous section end
-        const prevX = parseFloat(ball.dataset.lastX || "20"); 
-        const prevY = parseFloat(ball.dataset.lastY || "-35");
+        const prevX = parseFloat(ball.dataset.lastX || "-7"); 
+        const prevY = parseFloat(ball.dataset.lastY || "-28");
 
         const startX = prevX;
         const startY = prevY;
 
-        const endX = -10; // center X for full-screen
+        const endX = 10; // center X for full-screen
         const endY = 10; // center Y for full-screen
 
         const startSize = 40; // initial vw
@@ -522,7 +529,7 @@ export function useBallScrollAnimation(sectionIds: string[]) {
               y: `${y}%`,
               width: `${size}vw`,
               height: `${size}vw`,
-              translateX: "-50%",
+              translateX: "-90%",
               translateY: "-50%",
               background: "linear-gradient(270deg, #3BE29A, #3BE29A00)",
               opacity: progress < 0.99 ? 1 : 1, // hide when full-screen
@@ -543,7 +550,7 @@ export function useBallScrollAnimation(sectionIds: string[]) {
               y: `${endY}%`,
               width: `${endSize}vw`,
               height: `${endSize}vw`,
-              translateX: "-50%",
+              translateX: "-90%",
               translateY: "-50%",
               background: "linear-gradient(270deg, #3BE29A, #3BE29A00)",
               duration: 0.7,
@@ -556,11 +563,11 @@ export function useBallScrollAnimation(sectionIds: string[]) {
             // When scrolling back, start from previous position
             gsap.to(ball, {
               x: `${startX}%`,
-              y: `${startY}%`,
+              y: `${502}%`,
               width: `${startSize}vw`,
               height: `${startSize}vw`,
-              translateX: "-50%",
-              translateY: "-50%",
+              translateX: "-90%",
+              translateY: "50%",
               opacity: 1,
               duration: 0.7,
               ease: "power1.out",
