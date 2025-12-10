@@ -437,7 +437,7 @@ export function useBallScrollAnimation(sectionIds: string[]) {
           start: "top top",
           end: "bottom 110%",
           scrub: 1,
-          markers: true,
+          markers: false,
           onEnter: () => {
             gsap.to(ball, {
               background: "linear-gradient(270deg, #3BE29A, #3BE29A00)",
