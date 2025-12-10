@@ -189,9 +189,9 @@ p {
   }
 }
 
-/* Apply the animation via a class */
+
 .animate-heartbeat {
-  animation: heartbeat 6s ease-in-out infinite; /* Slow heartbeat */
+  animation: heartbeat 5s ease-in-out infinite; 
 }
 
 
