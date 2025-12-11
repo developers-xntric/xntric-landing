@@ -32,7 +32,7 @@ export function Button({
   return (
     <Component
       className={cn(
-        "relative h-16 w-40 overflow-hidden bg-transparent p-px text-xl",
+        "relative h-16 w-40 overflow-hidden bg-transparent p-4 text-xl",
         containerClassName,
       )}
       style={{
@@ -75,58 +75,56 @@ export const MovingBorder = ({
   rx,
   ry,
   ...otherProps
-}: {
-  children: React.ReactNode;
-  duration?: number;
-  rx?: string;
-  ry?: string;
-  [key: string]: any;
-}) => {
-  const pathRef = useRef<SVGPathElement | null>(null);
-  const progress = useMotionValue<number>(0);
+}: any) => {
+  const pathRef = useRef<SVGRectElement | null>(null);
+  const progress = useMotionValue(0);
 
   useAnimationFrame((time) => {
     const length = pathRef.current?.getTotalLength();
     if (length) {
-      const pxPerMillisecond = length / duration;
-      progress.set((time * pxPerMillisecond) % length);
+      const pxPerMs = length / duration;
+      progress.set((time * pxPerMs) % length);
     }
   });
 
-  const x = useTransform(
-    progress,
-    (val) => pathRef.current?.getPointAtLength(val).x,
+  const x = useTransform(progress, (v) =>
+    pathRef.current?.getPointAtLength(v).x
   );
-  const y = useTransform(
-    progress,
-    (val) => pathRef.current?.getPointAtLength(val).y,
+  const y = useTransform(progress, (v) =>
+    pathRef.current?.getPointAtLength(v).y
   );
 
-  const transform = useMotionTemplate`translateX(${x}px) translateY(${y}px) translateX(-50%) translateY(-50%)`;
+  const transform = useMotionTemplate`
+    translateX(${x}px)
+    translateY(${y}px)
+    translateX(-50%)
+    translateY(-50%)
+  `;
 
   return (
     <>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         preserveAspectRatio="none"
-        className="absolute h-full w-full"
-        width="100%"
-        height="100%"
+        className="absolute inset-0 w-full h-full"
         {...otherProps}
       >
-        <path
+        <rect
+          x="0"
+          y="0"
+          width="100%"
+          height="100%"
           fill="none"
-          d="M 0,0 L 100,0 L 100,100 L 0,100 Z"
           vectorEffect="non-scaling-stroke"
           ref={pathRef}
         />
       </svg>
+
       <motion.div
         style={{
           position: "absolute",
           top: 0,
           left: 0,
-          display: "inline-block",
           transform,
         }}
       >
@@ -135,3 +133,4 @@ export const MovingBorder = ({
     </>
   );
 };
+
