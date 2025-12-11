@@ -310,7 +310,7 @@ export function useBallScrollAnimation(sectionIds: string[]) {
           },
           onUpdate: (self) => {
             const progress = self.progress;
-            const startX = 140;
+            const startX = 150;
             const endX = -100;
             const startY = 51;
             const endY = 10;
@@ -650,8 +650,8 @@ export function useBallScrollAnimation(sectionIds: string[]) {
       if (id === "faq") {
         ScrollTrigger.create({
           trigger: el,
-          start: "top 55%",
-          end: "bottom 50%",
+          start: "top 50%",
+          end: "bottom 30%",
           scrub: 1.7,
           markers: false,
 
@@ -686,7 +686,7 @@ export function useBallScrollAnimation(sectionIds: string[]) {
               y: `${newY}%`,
               width: `${newSize}vw`,
               height: `${newSize}vw`,
-              duration: 0.6,
+              duration: 1.2,
               ease: "power1.out",
               overwrite: "auto",
             });
