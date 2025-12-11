@@ -11,8 +11,8 @@ export function PainPoints({ issues, id }: { issues?: Issue[]; id?: string }) {
     { year: "2020", icon: "/awward-1.svg" },
     { year: "2021", icon: "/awward-2.svg" },
     { year: "2022", icon: "/awward-1.svg" },
-    { year: "2023", icon: "/awward-4.svg" },
-    { year: "2024", icon: "/awward-5.svg" },
+    { year: "2023", icon: "/awward-2.svg" },
+    { year: "2024", icon: "/awward-1.svg" },
   ];
 
   const defaultIssues: Issue[] = [

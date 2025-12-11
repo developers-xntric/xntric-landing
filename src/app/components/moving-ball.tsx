@@ -310,7 +310,7 @@ export function useBallScrollAnimation(sectionIds: string[]) {
           },
           onUpdate: (self) => {
             const progress = self.progress;
-            const startX = 100;
+            const startX = 140;
             const endX = -100;
             const startY = 51;
             const endY = 10;
@@ -503,28 +503,31 @@ export function useBallScrollAnimation(sectionIds: string[]) {
         const startX = prevX;
         const startY = prevY;
 
-        const endX = 10;
-        const endY = -10;
+        const endX = 10;   // final small-ball X
+        const endY = -10;  // final small-ball Y
 
-        const startSize = 40;
-        const endSize = 480;
+        const startSize = 40;   // initial small ball size
+        const bigSize = 500;    // full-screen size
+        const finalSmall = 40;  // final small ball size
 
         ScrollTrigger.create({
           trigger: el,
-          start: "top 80%",
-          end: "bottom 50%",
+          start: "top 85%",
+          end: "bottom 70%",
           scrub: 1.4,
           markers: false,
 
           onUpdate: (self) => {
             const p = self.progress;
 
-            const size = startSize + (endSize - startSize) * p;
-            const x = startX + (endX - startX) * p;
-            const y = startY + (endY - startY) * p;
+            
+            if (p < 0.88) {
+              const growP = p / 0.88;
 
-            // 1️⃣ Grow normally
-            if (p < 0.90) {
+              const size = startSize + (bigSize - startSize) * growP;
+              const x = startX + (endX - startX) * growP * 0.2; 
+              const y = startY + (endY - startY) * growP * 0.2;
+
               gsap.to(ball, {
                 opacity: 1,
                 x: `${x}%`,
@@ -536,38 +539,51 @@ export function useBallScrollAnimation(sectionIds: string[]) {
                 duration: 1.2,
                 ease: "power1.out",
                 overwrite: "auto",
-                background: "linear-gradient(270deg, #3BE29A, #3BE29A00)"
+                background: "linear-gradient(270deg, #3BE29A, #3BE29A00)",
               });
+
               content.innerHTML = "";
+
               return;
             }
 
-            // 2️⃣ Fade out between 0.92 - 0.96
-            if (p >= 0.90 && p < 0.94) {
-              gsap.to(ball, {
-                opacity: 0,
-                duration: 1.6,
-                ease: "power1.out",
-                overwrite: "auto"
-              });
-              return;
-            }
+            // PHASE 2: Shrink + move to final small-ball position (0.88 → 0.95)
+            if (p >= 0.88 && p < 0.95) {
+              const shrinkP = (p - 0.88) / (0.95 - 0.88);
 
-            // 3️⃣ Show small ball AFTER 0.96
-            if (p >= 0.92) {
+              const size = bigSize + (finalSmall - bigSize) * shrinkP;
+              const x = startX + (endX - startX) * shrinkP;
+              const y = startY + (endY - startY) * shrinkP;
+
               gsap.to(ball, {
                 opacity: 1,
-                x: "110%",
-                y: "20%",
-                width: "40vw",
-                height: "40vw",
-
+                x: `${x}%`,
+                y: `${y}%`,
+                width: `${size}vw`,
+                height: `${size}vw`,
                 translateX: "-50%",
                 translateY: "-50%",
-                background: "linear-gradient(270deg, #3BE29A, #3BE29A00)",
-                duration: 0.6,
+                duration: 1,
                 ease: "power1.out",
-                overwrite: "auto"
+                overwrite: "auto",
+              });
+
+              return;
+            }
+
+            // PHASE 3: Final small ball (0.95 → 1)
+            if (p >= 0.95) {
+              gsap.to(ball, {
+                opacity: 1,
+                x: `${10}%`,  // 80
+                y: `${20}%`,
+                width: `${finalSmall}vw`,
+                height: `${finalSmall}vw`,
+                translateX: "-50%",
+                translateY: "-50%",
+                duration: 1.2,
+                ease: "power1.out",
+                overwrite: "auto",
               });
             }
           },
@@ -575,9 +591,10 @@ export function useBallScrollAnimation(sectionIds: string[]) {
           onLeave: () => {
             ball.dataset.lastX = endX.toString();
             ball.dataset.lastY = endY.toString();
-          }
+          },
         });
       }
+
 
 
 
