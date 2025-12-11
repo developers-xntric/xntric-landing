@@ -102,7 +102,7 @@ export default function CaseStudies({
         <section id={id} className={`${isPadding ? "py-16" : "py-16"}  font-futuru relative overflow-hidden`}>
 
 
-            <div className="absolute bottom-[250px] right-[-500px] -z-10">
+            <div className="absolute bottom-[250px] right-[-500px] -z-50">
                 <Image
                     src="/right-hero-bg.svg"
                     alt="Hero Background"

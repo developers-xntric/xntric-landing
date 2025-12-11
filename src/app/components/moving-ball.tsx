@@ -31,7 +31,7 @@ export function useBallScrollAnimation(sectionIds: string[]) {
           markers: false,
           onEnter: () => gsap.to(ball, { opacity: 1, duration: 0.3 }),
           onUpdate: (self) => {
-           const progress = self.progress;
+            const progress = self.progress;
 
             const startX = 10;
             const endX = -120;
@@ -55,7 +55,7 @@ export function useBallScrollAnimation(sectionIds: string[]) {
             });
             content.innerHTML = "";
           },
-         
+
 
           onLeaveBack: () => {
             gsap.to(ball, {
@@ -232,7 +232,7 @@ export function useBallScrollAnimation(sectionIds: string[]) {
             gsap.to(ball, {
               background: "linear-gradient(30deg, #0A4B35, #29DA9F)",
               duration: 0.5,
-              
+
             });
           },
           onEnterBack: () => {
@@ -281,14 +281,15 @@ export function useBallScrollAnimation(sectionIds: string[]) {
         });
       }
 
-      // I'll include them for completeness but they're unchanged
 
       if (id === "services") {
         ScrollTrigger.create({
           trigger: el,
-          start: "top 55%",
+          start: "top 40%",
           end: "bottom 80%",
-          scrub: 0.7,
+          scrub: 1.7,
+          markers: false,
+
           onEnter: () => {
             gsap.to(ball, {
               background: "linear-gradient(90deg, #3BE29A, #3BE29A00)",
@@ -309,7 +310,7 @@ export function useBallScrollAnimation(sectionIds: string[]) {
           },
           onUpdate: (self) => {
             const progress = self.progress;
-            const startX = 55;
+            const startX = 100;
             const endX = -100;
             const startY = 51;
             const endY = 10;
@@ -413,7 +414,7 @@ export function useBallScrollAnimation(sectionIds: string[]) {
           onUpdate: (self) => {
             const progress = self.progress;
             const startX = 105;
-            const endX = -90;
+            const endX = -125;
             const startY = 20;
             const endY = 40;
             const startSize = 40;
@@ -466,7 +467,7 @@ export function useBallScrollAnimation(sectionIds: string[]) {
           onUpdate: (self) => {
             const progress = self.progress;
             const startX = -90;
-            const endX = 20;
+            const endX = 140;
             const startY = 40;
             const endY = -20;
             const startSize = 35;
@@ -494,88 +495,90 @@ export function useBallScrollAnimation(sectionIds: string[]) {
       if (id === "why") {
         const ball = document.getElementById("floating-ball");
         const content = document.getElementById("ball-content");
-
         if (!ball || !content) return;
 
-        // Start position comes from previous section end
-        const prevX = parseFloat(ball.dataset.lastX || "-7"); 
-        const prevY = parseFloat(ball.dataset.lastY || "-28");
+        const prevX = parseFloat(ball.dataset.lastX || "-7");
+        const prevY = parseFloat(ball.dataset.lastY || "-6");
 
         const startX = prevX;
         const startY = prevY;
 
-        const endX = 10; // center X for full-screen
-        const endY = 10; // center Y for full-screen
+        const endX = 10;
+        const endY = -10;
 
-        const startSize = 40; // initial vw
-        const endSize = 480; // full-screen vw
+        const startSize = 40;
+        const endSize = 480;
 
         ScrollTrigger.create({
           trigger: el,
           start: "top 80%",
-          end: "bottom 70%",
-          scrub: 1.7,
+          end: "bottom 50%",
+          scrub: 1.4,
           markers: false,
+
           onUpdate: (self) => {
-            const progress = gsap.utils.clamp(0, 1, self.progress);
+            const p = self.progress;
 
-            // Smooth interpolation
-            const size = startSize + (endSize - startSize) * progress;
-            const x = startX + (endX - startX) * progress;
-            const y = startY + (endY - startY) * progress;
+            const size = startSize + (endSize - startSize) * p;
+            const x = startX + (endX - startX) * p;
+            const y = startY + (endY - startY) * p;
 
-            gsap.to(ball, {
-              x: `${x}%`,
-              y: `${y}%`,
-              width: `${size}vw`,
-              height: `${size}vw`,
-              translateX: "-90%",
-              translateY: "-50%",
-              background: "linear-gradient(270deg, #3BE29A, #3BE29A00)",
-              opacity: progress < 0.99 ? 1 : 1, // hide when full-screen
-              duration: 0.7,
-              ease: "power1.out",
-              overwrite: "auto",
-            });
+            // 1️⃣ Grow normally
+            if (p < 0.90) {
+              gsap.to(ball, {
+                opacity: 1,
+                x: `${x}%`,
+                y: `${y}%`,
+                width: `${size}vw`,
+                height: `${size}vw`,
+                translateX: "-50%",
+                translateY: "-50%",
+                duration: 1.2,
+                ease: "power1.out",
+                overwrite: "auto",
+                background: "linear-gradient(270deg, #3BE29A, #3BE29A00)"
+              });
+              content.innerHTML = "";
+              return;
+            }
 
-            content.innerHTML = "";
+            // 2️⃣ Fade out between 0.92 - 0.96
+            if (p >= 0.90 && p < 0.94) {
+              gsap.to(ball, {
+                opacity: 0,
+                duration: 1.6,
+                ease: "power1.out",
+                overwrite: "auto"
+              });
+              return;
+            }
+
+            // 3️⃣ Show small ball AFTER 0.96
+            if (p >= 0.92) {
+              gsap.to(ball, {
+                opacity: 1,
+                x: "110%",
+                y: "20%",
+                width: "40vw",
+                height: "40vw",
+
+                translateX: "-50%",
+                translateY: "-50%",
+                background: "linear-gradient(270deg, #3BE29A, #3BE29A00)",
+                duration: 0.6,
+                ease: "power1.out",
+                overwrite: "auto"
+              });
+            }
           },
 
           onLeave: () => {
-            // Store ending position for the next ball
-            // ball.dataset.lastX = `${endX}`;
-            // ball.dataset.lastY = `${endY}`;
-            gsap.to(ball, {
-              x: `${endX}%`,
-              y: `${endY}%`,
-              width: `${endSize}vw`,
-              height: `${endSize}vw`,
-              translateX: "-90%",
-              translateY: "-50%",
-              background: "linear-gradient(270deg, #3BE29A, #3BE29A00)",
-              duration: 0.7,
-              ease: "power1.out",
-              overwrite: "auto",
-            });
-          },
-
-          onEnterBack: () => {
-            // When scrolling back, start from previous position
-            gsap.to(ball, {
-              x: `${startX}%`,
-              y: `${502}%`,
-              width: `${startSize}vw`,
-              height: `${startSize}vw`,
-              translateX: "-90%",
-              translateY: "50%",
-              opacity: 1,
-              duration: 0.7,
-              ease: "power1.out",
-              overwrite: "auto",
-            });
-          },
+            ball.dataset.lastX = endX.toString();
+            ball.dataset.lastY = endY.toString();
+          }
         });
       }
+
 
 
       if (id === "testimonials") {
@@ -601,9 +604,9 @@ export function useBallScrollAnimation(sectionIds: string[]) {
 
           onUpdate: (self) => {
             const progress = self.progress;
-            const startX = -110;
-            const endX = 140;
-            const startY = 80;
+            const startX = 130;
+            const endX = -130;
+            const startY = 40;
             const endY = 40;
             const startSize = 35;
             const endSize = 35;
@@ -631,7 +634,7 @@ export function useBallScrollAnimation(sectionIds: string[]) {
         ScrollTrigger.create({
           trigger: el,
           start: "top 55%",
-          end: "bottom 80%",
+          end: "bottom 50%",
           scrub: 1.7,
           markers: false,
 
@@ -650,8 +653,8 @@ export function useBallScrollAnimation(sectionIds: string[]) {
 
           onUpdate: (self) => {
             const progress = self.progress;
-            const startX = 140;
-            const endX = -110;
+            const startX = 150;
+            const endX = -135;
             const startY = 40;
             const endY = 15;
             const startSize = 35;
@@ -666,7 +669,7 @@ export function useBallScrollAnimation(sectionIds: string[]) {
               y: `${newY}%`,
               width: `${newSize}vw`,
               height: `${newSize}vw`,
-              duration: 1.4,
+              duration: 0.6,
               ease: "power1.out",
               overwrite: "auto",
             });
