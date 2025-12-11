@@ -442,10 +442,10 @@ export function useBallScrollAnimation(sectionIds: string[]) {
       if (id === "case") {
         ScrollTrigger.create({
           trigger: el,
-          start: "top top",
+          start: "top 30%",
           end: "bottom 110%",
           scrub: 1,
-          markers: false,
+          markers: true,
           onEnter: () => {
             gsap.to(ball, {
               background: "linear-gradient(270deg, #3BE29A, #3BE29A00)",
@@ -469,7 +469,7 @@ export function useBallScrollAnimation(sectionIds: string[]) {
             const startX = -90;
             const endX = 140;
             const startY = 40;
-            const endY = -20;
+            const endY = 40;
             const startSize = 35;
             const endSize = 40;
 
@@ -482,7 +482,7 @@ export function useBallScrollAnimation(sectionIds: string[]) {
               y: `${newY}%`,
               width: `${newSize}vw`,
               height: `${newSize}vw`,
-              duration: 0.7,
+              duration: 1.7,
               ease: "power1.out",
               overwrite: "auto",
             });

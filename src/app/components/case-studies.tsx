@@ -91,7 +91,7 @@ export default function CaseStudies({
 }) {
     const [currentPage, setCurrentPage] = useState(0);
 
-    const itemsPerPage = 2;
+    const itemsPerPage = 1;
     const totalPages = Math.ceil(cardSets.length / itemsPerPage);
     const currentCardSets = cardSets.slice(
         currentPage * itemsPerPage,
