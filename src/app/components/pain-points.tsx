@@ -30,7 +30,7 @@ export function PainPoints({ issues, id }: { issues?: Issue[]; id?: string }) {
   return (
     <div id={id} className="relative w-full py-24 overflow-hidden">
       {/* Background Images */}
-      <div className="absolute top-[-80px] left-[-550px] -z-10">
+      <div className="absolute top-[-80px] left-[-550px] -z-50">
         <Image
           alt="Left Background"
           src="/left-hero-bg.svg"
