@@ -9,7 +9,7 @@ export default function WhyChooseUs({ id }: { id?: string }) {
             {/* Main Container for Circles */}
             <div className="relative w-full max-w-4xl h-96 md:h-[500px] flex items-center justify-center">
                 {/* Central Large Circle */}
-                <div className="absolute inset-0 flex items-center justify-center ">
+                <div className="absolute inset-0 flex items-center justify-center z-50">
                     {/* Circle background - scale this */}
                     <div
                         className="w-[405px] h-[405px] xl:w-[35vw] xl:h-[65vh] 2xl:w-[600px] 2xl:h-[600px] rounded-full bg-linear-to-br from-white via-white to-[#A1A1A14D] shadow-2xl animate-heartbeat"
@@ -76,7 +76,7 @@ export default function WhyChooseUs({ id }: { id?: string }) {
 
                 {/* Bottom Right Circle - CRO-Driven UX & UI */}
 
-                <div className="absolute bottom-[-20%] 2xl:bottom-[-45%] right-[-7%] xl:right-[-20%] 2xl:right-[-250px] w-[300px] h-[300px] 2xl:w-[350px] 2xl:h-[350px] rounded-full bg-linear-to-br to-[#193B6E3B] from-[#193B6E] flex items-center justify-center shadow-lg">
+                <div className="absolute bottom-[-20%] 2xl:bottom-[-45%] right-[-7%] xl:right-[-20%] 2xl:right-[-250px] w-[300px] h-[300px] 2xl:w-[350px] 2xl:h-[350px] rounded-full bg-linear-to-br to-[#193B6E3B] from-[#193B6E] flex items-center justify-center shadow-lg ">
                     <div className="text-center px-4 flex flex-col space-y-4">
                         <div className="text-[25px] md:text-[26px] 2xl:text-[30px] uppercase font-bold text-white leading-[45px] tracking-[1px]">CRO-driven UX & UI</div>
                         <p className="text-[17px] md:text-[12px] 2xl:text-[15px] font-regular text-white  leading-tight font-futuru tracking-[1.5px]">Designed to convert visitors into real leads.</p>
