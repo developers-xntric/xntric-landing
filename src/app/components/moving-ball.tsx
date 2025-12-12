@@ -598,7 +598,6 @@ export function useBallScrollAnimation(sectionIds: string[]) {
 
 
 
-
       if (id === "testimonials") {
         ScrollTrigger.create({
           trigger: el,
