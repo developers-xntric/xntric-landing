@@ -285,10 +285,10 @@ export function useBallScrollAnimation(sectionIds: string[]) {
       if (id === "services") {
         ScrollTrigger.create({
           trigger: el,
-          start: "top 40%",
+          start: "top 20%",
           end: "bottom 80%",
           scrub: 1.7,
-          markers: false,
+          markers: true,
 
           onEnter: () => {
             gsap.to(ball, {
