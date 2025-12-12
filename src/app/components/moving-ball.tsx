@@ -288,7 +288,7 @@ export function useBallScrollAnimation(sectionIds: string[]) {
           start: "top 20%",
           end: "bottom 80%",
           scrub: 1.7,
-          markers: true,
+          markers: false,
 
           onEnter: () => {
             gsap.to(ball, {
