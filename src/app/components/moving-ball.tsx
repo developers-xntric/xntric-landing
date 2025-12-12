@@ -391,8 +391,9 @@ export function useBallScrollAnimation(sectionIds: string[]) {
         ScrollTrigger.create({
           trigger: el,
           start: "top 55%",
-          end: "bottom 80%",
+          end: "bottom 50%",
           scrub: 1.7,
+          markers: false,
           onEnter: () => {
             gsap.to(ball, {
               background: "linear-gradient(270deg, #3BE29A, #3BE29A00)",
@@ -413,9 +414,9 @@ export function useBallScrollAnimation(sectionIds: string[]) {
           },
           onUpdate: (self) => {
             const progress = self.progress;
-            const startX = 105;
-            const endX = -125;
-            const startY = 20;
+            const startX = 130;
+            const endX = 130;
+            const startY = 40;
             const endY = 40;
             const startSize = 40;
             const endSize = 35;
@@ -442,8 +443,8 @@ export function useBallScrollAnimation(sectionIds: string[]) {
       if (id === "case") {
         ScrollTrigger.create({
           trigger: el,
-          start: "top 30%",
-          end: "bottom 110%",
+          start: "top 50%",
+          end: "bottom 50%",
           scrub: 1,
           markers: false,
           onEnter: () => {
@@ -466,8 +467,8 @@ export function useBallScrollAnimation(sectionIds: string[]) {
           },
           onUpdate: (self) => {
             const progress = self.progress;
-            const startX = -90;
-            const endX = 140;
+            const startX = -120;
+            const endX = -120;
             const startY = 40;
             const endY = 40;
             const startSize = 35;
@@ -601,10 +602,10 @@ export function useBallScrollAnimation(sectionIds: string[]) {
       if (id === "testimonials") {
         ScrollTrigger.create({
           trigger: el,
-          start: "top 68%",
-          end: "bottom 80%",
+          start: "top 40%",
+          end: "bottom 40%",
           scrub: 1.7,
-          markers: false,
+          markers: true,
 
           onEnter: () => {
             gsap.to(ball, {
@@ -621,10 +622,10 @@ export function useBallScrollAnimation(sectionIds: string[]) {
 
           onUpdate: (self) => {
             const progress = self.progress;
-            const startX = 130;
-            const endX = -130;
+            const startX = -130;
+            const endX = 150;
             const startY = 40;
-            const endY = 40;
+            const endY = 45;
             const startSize = 35;
             const endSize = 35;
 
@@ -650,8 +651,8 @@ export function useBallScrollAnimation(sectionIds: string[]) {
       if (id === "faq") {
         ScrollTrigger.create({
           trigger: el,
-          start: "top 50%",
-          end: "bottom 30%",
+          start: "top 10%",
+          end: "bottom 10%",
           scrub: 1.7,
           markers: false,
 
@@ -671,11 +672,11 @@ export function useBallScrollAnimation(sectionIds: string[]) {
           onUpdate: (self) => {
             const progress = self.progress;
             const startX = 150;
-            const endX = -135;
-            const startY = 40;
-            const endY = 15;
+            const endX = -155;
+            const startY = 45;
+            const endY = 20;
             const startSize = 35;
-            const endSize = 30;
+            const endSize = 35;
 
             const newX = startX + (endX - startX) * progress;
             const newY = startY + (endY - startY) * progress;
