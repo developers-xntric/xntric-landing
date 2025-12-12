@@ -2,7 +2,6 @@
 import Link from "next/link";
 import ClientsLogos from "./clients-logos";
 import Image from "next/image";
-import { Button } from "./ui/moving-border";
 
 const Hero = ({ id }: { id?: string }) => {
     return (
