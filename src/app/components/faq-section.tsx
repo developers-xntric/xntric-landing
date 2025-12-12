@@ -13,7 +13,7 @@ interface FAQItem {
 const faqItems: FAQItem[] = [
   {
     id: "1",
-    question: "How many users have you onboarded in the last month?",
+    question: "How many users you onboarded in the last month?",
     answer:
       "We have successfully onboarded hundreds of users and continue to grow our user base significantly each month.",
   },

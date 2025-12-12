@@ -36,7 +36,7 @@ export default function WhyChooseUs({ id }: { id?: string }) {
                 {/* Top Left Circle - Fast Delivery Timeline */}
 
                 <div
-                    className="absolute top-[-10%] left-[-4%] xl:left-[-20%] 2xl:left-[-300px] w-[250px] h-[250px] 2xl:w-[370px] 2xl:h-[370px] flex items-center justify-center bg-contain bg-center bg-no-repeat "
+                    className="absolute top-[-13%] left-[-4%] xl:left-[-20%] 2xl:left-[-300px] w-[250px] h-[250px] 2xl:w-[370px] 2xl:h-[370px] flex items-center justify-center bg-contain bg-center bg-no-repeat "
                     style={{ backgroundImage: "url('/left-top-circle-bg.png')" }}
                 >
                     <div className="text-center px-4 flex flex-col space-y-4">
@@ -60,7 +60,7 @@ export default function WhyChooseUs({ id }: { id?: string }) {
 
                 {/* Bottom Left Circle - Enterprise Scalability */}
                 <div
-                    className="absolute bottom-[-20%] 2xl:bottom-[-55%] left-[-5%] xl:left-[-20%] 2xl:left-[-30%] w-[290px] h-[290px] 2xl:w-[370px] 2xl:h-[370px] flex items-center justify-center  bg-cover bg-center bg-no-repeat"
+                    className="absolute bottom-[-18%] 2xl:bottom-[-55%] left-[-5%] xl:left-[-20%] 2xl:left-[-30%] w-[290px] h-[290px] 2xl:w-[370px] 2xl:h-[370px] flex items-center justify-center  bg-cover bg-center bg-no-repeat"
                     style={{ backgroundImage: "url('/left-bottom-circle-bg.png')" }}
                 >
                     <div className="text-center px-4 flex flex-col space-y-4">

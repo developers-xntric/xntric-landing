@@ -4,12 +4,12 @@ import React from "react";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="text-white bg-black relative pt-14 pb-10 font-futuru border-t bg-no-repeat overflow-hidden">
+    <footer className="text-white bg-black relative pt-8 pb-8 font-futuru border-t bg-no-repeat overflow-hidden">
 
-      <div className="px-6 2xl:max-w-[1740px] mx-auto md:w-[92%] 2xl:w-[87%]">
+      <div className=" 2xl:max-w-[1740px] mx-auto md:w-[92%] 2xl:w-[87%]">
         
         {/* Top Section */}
-        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-10">
+        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-">
 
           {/* Logo */}
           <div className="shrink-0">
@@ -44,7 +44,7 @@ const Footer: React.FC = () => {
       </div>
 
       {/* Bottom Section */}
-      <div className="mt-10 px-6 2xl:max-w-[1740px] mx-auto md:w-[92%] 2xl:w-[87%]">
+      <div className="mt-6  2xl:max-w-[1740px] mx-auto md:w-[92%] 2xl:w-[87%]">
         <p className="text-center xl:text-left text-[13px] md:text-[15px] tracking-widest">
           © ALL RIGHTS RESERVED, <span className="text-[#00AA71]">XNTRIC</span> 2025
         </p>
