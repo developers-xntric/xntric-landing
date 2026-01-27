@@ -20,7 +20,7 @@ export function PainPoints({ issues, id }: { issues?: Issue[]; id?: string }) {
     { id: "2", title: "Personalized discovery that feels natural" },
     { id: "3", title: "Cleaner, faster purchase journeys" },
     { id: "4", title: "Stronger data layers for better marketing" },
-    { id: "5", title: "Less busywork for your team" },
+    { id: "5", title: "Less busy work for your team" },
     { id: "6", title: "A system that improves quietly over time" },
     { id: "7", title: "Create seamless shopping paths that guide customers easily" },
   ];

@@ -136,7 +136,7 @@ export function ServicesSection({ id }: { id?: string }) {
                             className="group relative rounded-[8px] border-r border-t border-b border-white/10 bg-white/5 backdrop-blur-xl overflow-hidden p-4 transition-all duration-300 hover:border-white/40 hover:bg-white/20 space-y-5 2xl:space-y-4 h-[420px] 2xl:h-[410px]"
                         >
                             {/* Title */}
-                            <h3 className={`text-[22px] 2xl:text-[28px] font-semibold text-white tracking-[2px] leading-[32px] ${service.id === "1" ? "w-[80%]" : ""}`}>{service.title}</h3>
+                            <h3 className={`text-[22px] 2xl:text-[28px] font-semibold text-white tracking-[2px] leading-[32px] ${service.id === "1" ? "w-[95%]" : ""}`}>{service.title}</h3>
 
                             {/* Image */}
                             <div className={`relative  ${service.id === "1" ? "h-36" : "h-[175px]"} w-full overflow-hidden rounded-[8px] mt-3`}>

@@ -19,7 +19,7 @@ export default function WhyChooseUs({ id }: { id?: string }) {
                     {/* Content - absolutely centered so it doesn't scale */}
                     <div className="absolute flex flex-col items-center justify-center text-center px-4 -space-y-6 2xl:-space-y-6  w-[60%] 2xl:w-[70%]">
                         <div className="text-[25px] md:text-[25px] xl:text-[35px] 2xl:text-[40px] leading-[40px] uppercase text-black font-bold">
-                            Cleaner, more complete data‑layer signals = more efficient ad spend
+                           +10–18% improvement in product engagement
 
                         </div>
                         {/* <div className="text-[25px] md:text-[65px] 2xl:text-[80px] uppercase font-bold text-black">
@@ -29,8 +29,7 @@ export default function WhyChooseUs({ id }: { id?: string }) {
                             (Based on UX Score Metrics)
                         </div> */}
                         <p className="text-[17px] md:text-[14px] 2xl:text-[17px] font-regular text-black mt-10 leading-tight font-futuru tracking-[1px] w-[85%] 2xl:w-[85%] mx-auto">
-                           Marketing platforms receive richer, more accurate event data—
-helping your campaigns optimize faster and improving overall ROAS
+                            Cleaner journeys + smarter PDP layout help customers discover more.
                         </p>
                     </div>
                 </div>
@@ -44,10 +43,11 @@ helping your campaigns optimize faster and improving overall ROAS
                 >
                     <div className="text-center px-4 flex flex-col space-y-4">
                         <div className="text-[25px] md:text-[26px] 2xl:text-[30px] uppercase font-bold text-black 2xl:leading-[36px] leading-[28px]">
-                            +7–14% lift in add‑to‑cart actions
+                            25–40% less operational workload
                         </div>
                         <p className="text-[17px] md:text-[12px] 2xl:text-[15px] font-regular text-black leading-tight font-futuru tracking-[1px]">
-                           Better relevance and better timing lead to more buying intent.
+                          Automations replace repeated catalog and merchandising tasks.
+
                         </p>
                     </div>
                 </div>
@@ -56,8 +56,8 @@ helping your campaigns optimize faster and improving overall ROAS
                 {/* Top Right Circle - Performance-First Websites */}
                 <div className="absolute top-[-20%] right-[-8%] xl:right-[-20%] 2xl:right-[-300px] w-[300px] h-[300px] 2xl:w-[400px] 2xl:h-[400px] rounded-full bg-linear-to-br to-[#113D49] from-[#37C7EF] flex items-center justify-center">
                     <div className="text-center px-4 flex flex-col space-y-4">
-                        <div className="text-[25px] md:text-[36px] 2xl:text-[40px] uppercase font-bold text-black leading-[45px]">25–40% less operational workload</div>
-                        <p className="text-[17px] md:text-[12px] 2xl:text-[15px] font-regular text-black  leading-tight font-futuru tracking-[1px]">Automations replace repeated catalog and merchandising tasks.</p>
+                        <div className="text-[25px] md:text-[30px] 2xl:text-[28px] uppercase font-bold text-black 2xl:leading-[40px] leading-[28px]">   +7–14% lift in add‑to‑cart actions</div>
+                        <p className="text-[17px] md:text-[12px] 2xl:text-[15px] font-regular text-black  leading-tight font-futuru tracking-[1px] w-[95%]">Better relevance and better timing lead to more buying intent.</p>
                     </div>
                 </div>
 
@@ -68,10 +68,11 @@ helping your campaigns optimize faster and improving overall ROAS
                 >
                     <div className="text-center px-4 flex flex-col space-y-4">
                         <div className="text-[25px] md:text-[22px] 2xl:text-[28px] uppercase font-bold text-white leading-[27px] 2xl:leading-[35px] tracking-[2px]">
-                            +10–18% improvement in product engagement
+                           +12–20% increase in AOV
                         </div>
-                        <p className="text-[17px] md:text-[12px] 2xl:text-[15px] font-light text-white leading-tight font-futuru tracking-[1.5px]">
-                           Cleaner journeys + smarter PDP layout help customers discover more.
+                        <p className="text-[17px] md:text-[12px] 2xl:text-[15px] font-light text-white leading-tight font-futuru tracking-[1.5px] w-[95%]">
+                           Soft, behavior‑based cross‑sell & upsell that feels natural.
+
                         </p>
                     </div>
                 </div>
@@ -81,8 +82,9 @@ helping your campaigns optimize faster and improving overall ROAS
 
                 <div className="absolute bottom-[-20%] 2xl:bottom-[-45%] right-[-7%] xl:right-[-20%] 2xl:right-[-250px] w-[300px] h-[300px] 2xl:w-[350px] 2xl:h-[350px] rounded-full bg-linear-to-br to-[#193B6E3B] from-[#193B6E] flex items-center justify-center shadow-lg ">
                     <div className="text-center px-4 flex flex-col space-y-4">
-                        <div className="text-[25px] md:text-[26px] 2xl:text-[30px] uppercase font-bold text-white leading-[40px] tracking-[1px]">+12–20% increase in AOV</div>
-                        <p className="text-[17px] md:text-[12px] 2xl:text-[15px] font-regular text-white  leading-tight font-futuru tracking-[1.5px]">Soft, behavior‑based cross‑sell & upsell that feels natural.</p>
+                        <div className="text-[25px] md:text-[26px] 2xl:text-[30px] uppercase font-bold text-white leading-[36px] tracking-[1px]">  Smart data‑layer = efficient ad spend</div>
+                        <p className="text-[17px] md:text-[12px] 2xl:text-[15px] font-regular text-white  leading-tight font-futuru tracking-[1.5px]">Marketing platforms receive richer, more accurate event data
+helping your campaigns optimize faster and improving overall <span className="font-bold">ROAS.</span></p>
                     </div>
                 </div>
             </div>
