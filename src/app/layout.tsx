@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
+import SmoothScrollProvider from "./components/smoothscrollprovider";
 
 
 export const metadata: Metadata = {
@@ -24,7 +25,9 @@ export default function RootLayout({
         className={` antialiased`}
       >
         <Navbar />
-        {children}
+        <SmoothScrollProvider>
+          {children}
+        </SmoothScrollProvider>
         <Footer />
       </body>
     </html>
