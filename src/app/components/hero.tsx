@@ -29,30 +29,29 @@ const Hero = ({ id }: { id?: string }) => {
             <div className=" 2xl:max-w-[1380px] mx-auto md:w-[80%] py-24 flex flex-col lg:flex-row items-center justify-between gap-5 2xl:gap-0  ">
                 {/* Left Content */}
                 <div className="lg:w-2/3 space-y-6">
-                    <h1 className="text-4xl lg:text-[50px] xl:text-[60px] 2xl:text-[75px] font-bold md:leading-[55px] 2xl:leading-[75px] uppercase max-w-[600px] 2xl:max-w-[700px]">
-                        High-Performance <br /> Websites Designed for Growth.
+                    <h1 className="text-4xl lg:text-[50px] xl:text-[60px] 2xl:text-[75px] font-bold md:leading-[55px] 2xl:leading-[75px] uppercase max-w-[600px] 2xl:max-w-[770px]">
+                        Build a Smart E‑Commerce Store That Works for You 
                     </h1>
                     <p className="text-[20px] text-white font-light tracking-[1.5px]">
-                        We build scalable, conversion-focused websites that elevate brands
-                        and accelerate business results.
-                    </p>
+                        We build stores that adapt to behavior, reduce manual work, and convert consistently.
 
+                    </p>
 
                     <div className="flex gap-4">
 
                         <Link
                             href="#"
-                            className="px-8  2xl:px-12 pb-3 pt-3 tracking-[1.5px] rounded-md text-white 2xl:text-[18px] transition uppercase bg-[#00AA71] hover:bg-transparent hover:text-[#00AA71] hover:border-[#00AA71] hover:border"
+                            className="px-8  2xl:px-12 pb-3 pt-2 tracking-[1.5px] rounded-md text-white 2xl:text-[18px] transition uppercase bg-[#00AA71] hover:bg-transparent hover:text-[#00AA71] hover:border-[#00AA71] hover:border"
 
                         >
                             Book a Free Consultation
                         </Link>
                         <Link
                             href="#"
-                            className="px-8 2xl:px-14 pb-3 pt-3 tracking-[1.5px] rounded-md hover:text-white 2xl:text-[18px] transition uppercase hover:bg-[#00AA71] bg-transparent text-[#00AA71] border-[#00AA71] border"
+                            className="px-8 2xl:px-14 pb-3 pt-2 tracking-[1.5px] rounded-md hover:text-white 2xl:text-[18px] transition uppercase hover:bg-[#00AA71] bg-transparent text-[#00AA71] border-[#00AA71] border"
 
                         >
-                            View Portfolio
+                            See Our Work
                         </Link>
                     </div>
                 </div>

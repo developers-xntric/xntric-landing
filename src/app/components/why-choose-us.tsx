@@ -3,7 +3,8 @@ export default function WhyChooseUs({ id }: { id?: string }) {
         <section id={id} className="relative w-full min-h-[110vh] 2xl:min-h-[1100px] overflow-hidden flex items-center justify-center px-4 py-24">
             {/* Heading */}
             <div className="absolute top-8 left-1/2 transform -translate-x-1/2 z-10">
-                <h2 className="text-white text-4xl md:text-5xl font-bold text-center tracking-wide">WHY COMPANIES CHOOSE US</h2>
+                <h2 className="text-white text-4xl md:text-5xl font-bold text-center tracking-wide">Why Businesses Choose Us (Credible, Decision‑Helping Stats)
+</h2>
             </div>
 
             {/* Main Container for Circles */}
@@ -17,17 +18,19 @@ export default function WhyChooseUs({ id }: { id?: string }) {
 
                     {/* Content - absolutely centered so it doesn't scale */}
                     <div className="absolute flex flex-col items-center justify-center text-center px-4 -space-y-6 2xl:-space-y-6  w-[60%] 2xl:w-[70%]">
-                        <div className="text-[25px] md:text-[25px] xl:text-[35px] 2xl:text-[40px] uppercase text-black font-medium">
-                            70% Better User
+                        <div className="text-[25px] md:text-[25px] xl:text-[35px] 2xl:text-[40px] leading-[40px] uppercase text-black font-bold">
+                            Cleaner, more complete data‑layer signals = more efficient ad spend
+
                         </div>
-                        <div className="text-[25px] md:text-[65px] 2xl:text-[80px] uppercase font-bold text-black">
+                        {/* <div className="text-[25px] md:text-[65px] 2xl:text-[80px] uppercase font-bold text-black">
                             Experience
                         </div>
                         <div className="text-[25px] md:text-[25px] xl:text-[35px] 2xl:text-[35px] uppercase text-black mt-2 font-medium">
                             (Based on UX Score Metrics)
-                        </div>
-                        <p className="text-[17px] md:text-[14px] 2xl:text-[17px] font-regular text-black mt-10 leading-tight font-futuru tracking-[1px] w-[80%] 2xl:w-[80%] mx-auto">
-                            Through optimized navigation, mobile-first architecture, and simplified interaction patterns, clients benefit from a 70% improvement in overall user experience, measured across engagement, bounce rate, and task completion time.
+                        </div> */}
+                        <p className="text-[17px] md:text-[14px] 2xl:text-[17px] font-regular text-black mt-10 leading-tight font-futuru tracking-[1px] w-[85%] 2xl:w-[85%] mx-auto">
+                           Marketing platforms receive richer, more accurate event data—
+helping your campaigns optimize faster and improving overall ROAS
                         </p>
                     </div>
                 </div>
@@ -41,10 +44,10 @@ export default function WhyChooseUs({ id }: { id?: string }) {
                 >
                     <div className="text-center px-4 flex flex-col space-y-4">
                         <div className="text-[25px] md:text-[26px] 2xl:text-[30px] uppercase font-bold text-black 2xl:leading-[36px] leading-[28px]">
-                            Fast delivery timeline
+                            +7–14% lift in add‑to‑cart actions
                         </div>
                         <p className="text-[17px] md:text-[12px] 2xl:text-[15px] font-regular text-black leading-tight font-futuru tracking-[1px]">
-                            Sprint-based approach and weekly updates.
+                           Better relevance and better timing lead to more buying intent.
                         </p>
                     </div>
                 </div>
@@ -53,8 +56,8 @@ export default function WhyChooseUs({ id }: { id?: string }) {
                 {/* Top Right Circle - Performance-First Websites */}
                 <div className="absolute top-[-20%] right-[-8%] xl:right-[-20%] 2xl:right-[-300px] w-[300px] h-[300px] 2xl:w-[400px] 2xl:h-[400px] rounded-full bg-linear-to-br to-[#113D49] from-[#37C7EF] flex items-center justify-center">
                     <div className="text-center px-4 flex flex-col space-y-4">
-                        <div className="text-[25px] md:text-[36px] 2xl:text-[40px] uppercase font-bold text-black leading-[45px]">Performance-first websites</div>
-                        <p className="text-[17px] md:text-[12px] 2xl:text-[15px] font-regular text-black  leading-tight font-futuru tracking-[1px]">Lighthouse 90+ scores, Core Web Vitals optimized.</p>
+                        <div className="text-[25px] md:text-[36px] 2xl:text-[40px] uppercase font-bold text-black leading-[45px]">25–40% less operational workload</div>
+                        <p className="text-[17px] md:text-[12px] 2xl:text-[15px] font-regular text-black  leading-tight font-futuru tracking-[1px]">Automations replace repeated catalog and merchandising tasks.</p>
                     </div>
                 </div>
 
@@ -65,10 +68,10 @@ export default function WhyChooseUs({ id }: { id?: string }) {
                 >
                     <div className="text-center px-4 flex flex-col space-y-4">
                         <div className="text-[25px] md:text-[22px] 2xl:text-[28px] uppercase font-bold text-white leading-[27px] 2xl:leading-[35px] tracking-[2px]">
-                            Enterprise scalability & secure infrastructure
+                            +10–18% improvement in product engagement
                         </div>
                         <p className="text-[17px] md:text-[12px] 2xl:text-[15px] font-light text-white leading-tight font-futuru tracking-[1.5px]">
-                            Suitable for multi-branch, multilingual, and high-traffic ecosystems.
+                           Cleaner journeys + smarter PDP layout help customers discover more.
                         </p>
                     </div>
                 </div>
@@ -78,8 +81,8 @@ export default function WhyChooseUs({ id }: { id?: string }) {
 
                 <div className="absolute bottom-[-20%] 2xl:bottom-[-45%] right-[-7%] xl:right-[-20%] 2xl:right-[-250px] w-[300px] h-[300px] 2xl:w-[350px] 2xl:h-[350px] rounded-full bg-linear-to-br to-[#193B6E3B] from-[#193B6E] flex items-center justify-center shadow-lg ">
                     <div className="text-center px-4 flex flex-col space-y-4">
-                        <div className="text-[25px] md:text-[26px] 2xl:text-[30px] uppercase font-bold text-white leading-[45px] tracking-[1px]">CRO-driven UX & UI</div>
-                        <p className="text-[17px] md:text-[12px] 2xl:text-[15px] font-regular text-white  leading-tight font-futuru tracking-[1.5px]">Designed to convert visitors into real leads.</p>
+                        <div className="text-[25px] md:text-[26px] 2xl:text-[30px] uppercase font-bold text-white leading-[40px] tracking-[1px]">+12–20% increase in AOV</div>
+                        <p className="text-[17px] md:text-[12px] 2xl:text-[15px] font-regular text-white  leading-tight font-futuru tracking-[1.5px]">Soft, behavior‑based cross‑sell & upsell that feels natural.</p>
                     </div>
                 </div>
             </div>

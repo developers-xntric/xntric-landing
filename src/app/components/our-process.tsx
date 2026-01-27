@@ -191,12 +191,12 @@ export default function OurProcess({
                 <div className="px-6">
                     <h2 style={{
                         fontFamily: "Futuru",
-                        background: "linear-gradient(264deg, #00AA71 0%, #FFF 36.57%)",
+                        background: "linear-gradient(264deg, #00AA71 0%, #FFF 56.57%)",
                         backgroundClip: "text",
                         WebkitBackgroundClip: "text",
                         WebkitTextFillColor: "transparent",
                     }} className="text-[50px] leading-[50px] font-bold tracking-[2px] text-white text-center max-w-[800px] mx-auto uppercase">
-                        Our Proven Website<br /> Development Process
+                       E‑Commerce Process (short, sharp, effective)
                     </h2>
                 </div>
 

@@ -18,8 +18,8 @@ import { useBallScrollAnimation } from "./components/moving-ball";
 export const steps4 = [
   {
     number: "01",
-    title: "Discovery & Strategy ",
-    description: "Business goals, technical audit, sitemap planning",
+    title: "Discovery ",
+    description: "We learn your business, customers, and goals to build with purpose.",
     icon: "/discover-icon.svg",
     bgImage: "/discover-bg.png",
     bgColor: "bg-gray-900",
@@ -28,7 +28,7 @@ export const steps4 = [
     number: "02",
     title: "UX/UI Design",
     description:
-      "Wireframes, prototypes, brand-aligned visuals",
+      "Clean, intuitive, high‑trust flows built around real shopping behavior.",
     icon: "/ui-icon.svg",
     bgImage: "/ui-bg.png",
     bgColor: "bg-gray-800",
@@ -36,23 +36,23 @@ export const steps4 = [
   {
     number: "03",
     title: "Development",
-    description: "Front-end + back-end, CMS setup, API integrations",
+    description: "Fast, secure, scalable foundations with modern best practices.",
     icon: "/dev-icon.svg",
     bgImage: "/dev-bg.png",
     bgColor: "bg-gray-700",
   },
   {
     number: "04",
-    title: "Optimization",
-    description: "Performance, SEO, CRO, QA testing",
+    title: "Smart Enhancements",
+    description: "Automation, personalization, and behavior tools that lift conversions.",
     icon: "/optimize-icon.svg",
     bgImage: "/optimize-bg.png",
     bgColor: "bg-gray-900",
   },
   {
     number: "04",
-    title: "Launch & Handover",
-    description: "Deployment, documentation, training",
+    title: "Optimization & Launch",
+    description: "Testing, refinement, and a smooth go‑live that’s ready to sell.",
     icon: "/launch-icon.svg",
     bgImage: "/launch-bg.png",
     bgColor: "bg-emerald-500",

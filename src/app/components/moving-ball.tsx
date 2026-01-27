@@ -273,8 +273,8 @@ export function useBallScrollAnimation(sectionIds: string[]) {
 
             const opacity = 2 - progress;
             content.innerHTML = `
-              <p class="text-[4vw] md:text-[3vw] lg:text-[2.5vw] font-bold text-center tracking-[1.5px] uppercase w-[80%] mx-auto leading-[1.2em] text-white" style="opacity: ${opacity}">
-                Is Your Website Holding Your Business Back?
+              <p class="text-[4vw] md:text-[3vw] lg:text-[2.5vw] font-bold text-center tracking-[1.5px] uppercase w-[90%] mx-auto leading-[1.2em] text-white" style="opacity: ${opacity}">
+                Most stores sell. Smart stores convert
               </p>
             `;
           },

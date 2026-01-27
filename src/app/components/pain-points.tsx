@@ -16,13 +16,13 @@ export function PainPoints({ issues, id }: { issues?: Issue[]; id?: string }) {
   ];
 
   const defaultIssues: Issue[] = [
-    { id: "1", title: "Slow load times and poor performance" },
-    { id: "2", title: "Outdated UX/UI hurting credibility" },
-    { id: "3", title: "Not optimized for mobile or SEO" },
-    { id: "4", title: "Low conversion rates" },
-    { id: "5", title: "Security issues" },
-    { id: "6", title: "Difficult to manage or scale" },
-    { id: "7", title: "No multilingual or multi-location support" },
+    { id: "1", title: "Product pages that adapt to real behavior" },
+    { id: "2", title: "Personalized discovery that feels natural" },
+    { id: "3", title: "Cleaner, faster purchase journeys" },
+    { id: "4", title: "Stronger data layers for better marketing" },
+    { id: "5", title: "Less busywork for your team" },
+    { id: "6", title: "A system that improves quietly over time" },
+    { id: "7", title: "Create seamless shopping paths that guide customers easily" },
   ];
 
   const list = issues || defaultIssues;

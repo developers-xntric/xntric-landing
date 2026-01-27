@@ -80,7 +80,7 @@ export function FAQSection({ id }: { id?: string }) {
       onClick={() => toggleExpand(item.id)}
     >
       <div className="flex items-start justify-between gap-4">
-        <h3 className="text-[20px] 2xl:text-[25px] text-white tracking-[1.5px] flex-1">
+        <h3 className="text-[20px] 2xl:text-[24px] text-white tracking-[1.5px] flex-1">
           {item.question}
         </h3>
 
@@ -105,7 +105,7 @@ export function FAQSection({ id }: { id?: string }) {
           maxHeight: expandedId === item.id ? "200px" : "0px",
         }}
       >
-        <div className="text-[16px] 2xl:text-[22px] text-white font-light tracking-[2px] max-w-[85%]">
+        <div className="text-[16px] 2xl:text-[21px] text-white font-light tracking-[2px] max-w-[85%]">
           {item.answer}
         </div>
       </div>

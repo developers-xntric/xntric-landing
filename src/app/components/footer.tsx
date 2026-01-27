@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
       {/* Bottom Section */}
       <div className="mt-6  2xl:max-w-[1740px] mx-auto md:w-[92%] 2xl:w-[87%]">
         <p className="text-center xl:text-left text-[13px] md:text-[15px] tracking-widest">
-          © ALL RIGHTS RESERVED, <span className="text-[#00AA71]">XNTRIC</span> 2025
+          © ALL RIGHTS RESERVED, <span className="text-[#00AA71]">XNTRIC</span> {new Date().getFullYear()}
         </p>
       </div>
 

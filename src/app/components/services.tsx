@@ -16,54 +16,50 @@ interface ServiceCard {
 const services: ServiceCard[] = [
     {
         id: "1",
-        title: "Custom Website Development",
+        title: "E‑Commerce Store Development",
         description: "Tailored",
         tags: ["Responsive Design", "High Performance Builds"],
         image: "/1-service.svg",
         href: "#",
         points: [
-            "Tailored",
-            "API-driven,",
-            "high-performance builds"
+            "New stores or brands upgrading from a basic setup",
+           
         ]
     },
     {
         id: "2",
-        title: "Corporate Websites",
+        title: "Small Business E‑Commerce Stores",
         description: "Enterprise Grade",
         tags: ["Scalable Solutions"],
         image: "/2-service.svg",
         href: "#",
         points: [
-            "Enterprise-grade,",
-            "Secure,",
-            "Scalable Solutions"
+            "Entrepreneurs and small teams who want efficiency over maintenance",
+            
         ]
     },
     {
         id: "3",
-        title: "E-Commerce Websites",
+        title: "E‑Commerce Revamp",
         description: "Shopify",
         tags: ["Custom-Built Ecommerce"],
         image: "/3-service.svg",
         href: "#",
         points: [
-            "Shopify",
-            "WooCommerce",
-            "Custom-Built Ecommerce"
+            "Stores that feel slow, dated, or leaky in the funnel.",
+           
         ]
     },
     {
         id: "4",
-        title: "Web Applications",
+        title: "Smart E‑Commerce Implementation",
         description: "Custom Solutions",
         tags: ["SAAS", "OTH to Own Apps"],
         image: "/4-service.svg",
         href: "#",
         points: [
-            "Custom dashboards,",
-            "Portals,",
-            "Data-Driven Apps"
+            "Teams that want results without a full rebuild",
+          
         ]
     },
 ];
@@ -114,14 +110,11 @@ export function ServicesSection({ id }: { id?: string }) {
 
                         {/* Right Content */}
                         <div className="flex flex-col gap-4 p-8 justify-center">
-                            <h3 className="text-[35px] font-semibold text-white tracking-[2px]">Website Redesign</h3>
+                            <h3 className="text-[35px] font-semibold text-white tracking-[2px]">Smart Store Development</h3>
                             <div className="flex flex-col gap-2">
-                                <p className="text-[20px] text-white tracking-[2px]">Modernize It</p>
-                                <p className="text-[20px] text-white tracking-[2px]">Fix Performance</p>
-                                <p className="text-[20px] text-white tracking-[2px]">Re-Architect The Site</p>
+                                <p className="text-[20px] text-white tracking-[2px]">Brands ready for intelligent</p>
+                                <p className="text-[20px] text-white tracking-[2px]">automated shopping experiences.</p>
                             </div>
-
-
 
                             <Link
                                 href="#"
