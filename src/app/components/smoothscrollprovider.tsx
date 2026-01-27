@@ -12,7 +12,6 @@ export default function SmoothScrollProvider({
         const lenis = new Lenis({
             duration: 1.2, // ⬅️ higher = slower scroll
             easing: (t: number) => 1 - Math.pow(1 - t, 3), // smooth easing
-            smooth: true,
         });
 
         function raf(time: number) {
