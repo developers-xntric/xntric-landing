@@ -68,7 +68,7 @@ export function ServicesSection({ id }: { id?: string }) {
     return (
         <section id={id} className="relative w-full overflow-hidden py-16">
             {/* LEFT BG SVG */}
-            <div className="absolute bottom-[-10px] left-[-300px] -z-50">
+            <div className="absolute -bottom-2.5 left-[-300px] -z-50">
                 <Image
                     src="/left-hero-bg.svg"
                     alt="Hero Background"
@@ -96,7 +96,7 @@ export function ServicesSection({ id }: { id?: string }) {
                 {/* ✅ FEATURED CARD (Image Left, Content Right) */}
                 {/* --------------------------------------------------- */}
                 <div className="w-full mb-8">
-                    <div className="group relative rounded-[8px] border-r border-t border-b border-[#FFFFFF33] bg-white/5 backdrop-blur-xl overflow-hidden grid grid-cols-1 lg:grid-cols-2">
+                    <div className="group relative rounded-xl border-r border-t border-b border-[#FFFFFF33] bg-white/5 backdrop-blur-xl overflow-hidden grid grid-cols-1 lg:grid-cols-2">
 
                         {/* Left Image */}
                         <div className="relative h-64 2xl:h-80 w-full overflow-hidden mt-4 ml-4  2xl:mb-4 2xl:ml-4">
@@ -104,7 +104,7 @@ export function ServicesSection({ id }: { id?: string }) {
                                 src="/web-service.svg"
                                 alt="Website Redesign"
                                 fill
-                                className="object-cover rounded-[8px]"
+                                className="object-cover rounded-xl"
                             />
                         </div>
 
@@ -133,13 +133,13 @@ export function ServicesSection({ id }: { id?: string }) {
                     {services.map((service) => (
                         <div
                             key={service.id}
-                            className="group relative rounded-[8px] border-r border-t border-b border-white/10 bg-white/5 backdrop-blur-xl overflow-hidden p-4 transition-all duration-300 hover:border-white/40 hover:bg-white/20 space-y-5 2xl:space-y-4 h-[420px] 2xl:h-[410px]"
+                            className="group relative rounded-xl border-r border-t border-b border-white/10 bg-white/5 backdrop-blur-xl overflow-hidden p-4 transition-all duration-300 hover:border-white/40 hover:bg-white/20 space-y-5 2xl:space-y-4 h-[420px] 2xl:h-[410px]"
                         >
                             {/* Title */}
-                            <h3 className={`text-[22px] 2xl:text-[28px] font-semibold text-white tracking-[2px] leading-[32px] ${service.id === "1" ? "w-[95%]" : ""}`}>{service.title}</h3>
+                            <h3 className={`text-[22px] 2xl:text-[28px] font-semibold text-white tracking-[2px] leading-8 ${service.id === "1" ? "w-[95%]" : ""}`}>{service.title}</h3>
 
                             {/* Image */}
-                            <div className={`relative  ${service.id === "1" ? "h-36" : "h-[175px]"} w-full overflow-hidden rounded-[8px] mt-3`}>
+                            <div className={`relative  ${service.id === "1" ? "h-36" : "h-[175px]"} w-full overflow-hidden rounded-xl mt-3`}>
                                 <Image
                                     src={service.image}
                                     alt={service.title}
