@@ -115,7 +115,7 @@ export function FAQSection({ id }: { id?: string }) {
   return (
     <div id={id} className="w-full py-16 relative">
       {/* Background SVGs */}
-      <div className="absolute top-[-50px] left-[-450px] -z-50">
+      {/* <div className="absolute top-[-50px] left-[-450px] -z-50">
         <Image
           src="/left-hero-bg.svg"
           alt="Hero Background"
@@ -123,7 +123,7 @@ export function FAQSection({ id }: { id?: string }) {
           height={400}
           className="w-[90%] h-full object-cover"
         />
-      </div>
+      </div> */}
       <h2 style={{
         fontFamily: "Futuru",
         background: "linear-gradient(264deg, #00AA71 0%, #FFF 36.57%)",

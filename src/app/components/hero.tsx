@@ -7,7 +7,7 @@ const Hero = ({ id }: { id?: string }) => {
     return (
         <section id={id} className="relative  text-white overflow-hidden ">
             {/* Background SVGs */}
-            <div className="absolute top-[-80px] left-[-550px] -z-10">
+            {/* <div className="absolute top-[-80px] left-[-550px] -z-10">
                 <Image
                     src="/left-hero-bg.svg"
                     alt="Hero Background"
@@ -15,8 +15,8 @@ const Hero = ({ id }: { id?: string }) => {
                     height={400}
                     className="w-full h-full object-cover"
                 />
-            </div>
-            <div className="absolute bottom-[70px] right-[-550px] -z-10">
+            </div> */}
+            {/* <div className="absolute bottom-[70px] right-[-550px] -z-10">
                 <Image
                     src="/right-hero-bg.svg"
                     alt="Hero Background"
@@ -24,7 +24,7 @@ const Hero = ({ id }: { id?: string }) => {
                     height={400}
                     className="w-full h-full object-cover"
                 />
-            </div>
+            </div> */}
 
             <div className=" 2xl:max-w-[1380px] mx-auto md:w-[80%] py-24 flex flex-col lg:flex-row items-center justify-between gap-5 2xl:gap-0  ">
                 {/* Left Content */}

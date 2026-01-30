@@ -230,7 +230,7 @@ export default function TechStack({
             onMouseEnter={() => setIsAutoPlaying(false)}
             onMouseLeave={() => setIsAutoPlaying(true)}
         >
-            <div className="absolute bottom-[-150px] left-[-400px] -z-50">
+            {/* <div className="absolute bottom-[-150px] left-[-400px] -z-50">
                 <Image
                     src="/left-hero-bg.svg"
                     alt="Hero Background"
@@ -238,7 +238,7 @@ export default function TechStack({
                     height={400}
                     className="w-[85%] h-full object-cover"
                 />
-            </div>
+            </div> */}
 
             {/* Content */}
             <div className="relative z-10 2xl:max-w-[1740px] mx-auto md:w-[91.5%] 2xl:w-[92.5%]">

@@ -98,7 +98,7 @@ export default function Home() {
       <CaseStudies id="case" />
       <Testimonials id="testimonials" />
       <div className="relative overflow-hidden">
-        <div className="absolute -bottom-20 right-[-550px] -z-50">
+        {/* <div className="absolute -bottom-20 right-[-550px] -z-50">
           <Image
             src="/right-hero-bg.svg"
             alt="Hero Background"
@@ -106,7 +106,7 @@ export default function Home() {
             height={400}
             className="w-full h-full object-cover"
           />
-        </div>
+        </div> */}
         <FAQSection id="faq" />
         <CTASection id="cta" />
       </div>

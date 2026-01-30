@@ -68,7 +68,7 @@ export function ServicesSection({ id }: { id?: string }) {
     return (
         <section id={id} className="relative w-full overflow-hidden py-16">
             {/* LEFT BG SVG */}
-            <div className="absolute -bottom-2.5 left-[-300px] -z-50">
+            {/* <div className="absolute -bottom-2.5 left-[-300px] -z-50">
                 <Image
                     src="/left-hero-bg.svg"
                     alt="Hero Background"
@@ -76,7 +76,7 @@ export function ServicesSection({ id }: { id?: string }) {
                     height={400}
                     className="w-[65%] h-full object-cover"
                 />
-            </div>
+            </div> */}
 
             <div className="relative z-10 2xl:max-w-[1740px] mx-auto md:w-[89%] 2xl:w-[85%]">
                 {/* Heading */}
